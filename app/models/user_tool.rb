@@ -4,5 +4,4 @@ class UserTool < ApplicationRecord
 
   validates :user_id, presence: true
   validated :tool_id, presence: true
-
 end
