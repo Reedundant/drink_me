@@ -1,0 +1,2 @@
+class UserIngredientsController < ApplicationController
+end
