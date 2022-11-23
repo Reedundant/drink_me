@@ -1,6 +1,18 @@
-puts "> Destroying all ingredients..."
+puts "> Destroying all ingredients, and users..."
 Ingredient.destroy_all
-puts "> Done destroying all ingredients! "
+User.destroy_all
+puts "> Done destroying all ingredients, and users! "
+
+puts "> Generating users..."
+puts ""
+
+User.create!(email: 'jacktorrance@gmail.com', username: 'jacktorrance', age: 57, password: 'drinkme123')
+User.create!(email: 'jacknicholson@gmail.com', username: 'jacknietzscheson', age: 85, password: 'drinkme123')
+# pp User.all
+
+puts "> Done generating users! 👤"
+puts ""
+
 puts "> Generating ingredients..."
 puts ""
 
@@ -34,7 +46,7 @@ Ingredient.create(name: 'lime juice', category: 'juice')
 Ingredient.create(name: 'pineapple juice', category: 'juice')
 Ingredient.create(name: 'apple juice', category: 'juice')
 
-pp Ingredient.all
+# pp Ingredient.all
 
 puts ""
 puts "> Done generating ingredients! 🥃"
