@@ -1,0 +1,8 @@
+<%= simple_form_for(@user_ingredient) do |f| %>
+  <%# Dropdown for liquors %>
+  <%= f.input :ingredient_id, :label => "Liquor", :collection => @liquors, :selected => @liquors.first %>
+  <%= f.input :ingredient_id, :label => "Liqueur", :collection => @liqueurs, :selected => @liqueurs.first %>
+  <%= f.input :ingredient_id, :label => "Syrup", :collection => @syrups, :selected => @syrups.first %>
+  <%= f.input :ingredient_id, :label => "Juice", :collection => @juices, :selected => @juices.first %>
+  <%= f.submit 'Go'%>
+<% end %>
