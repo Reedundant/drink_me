@@ -12,7 +12,6 @@ Ingredient.create(name: 'scotch', category: 'liquor')
 Ingredient.create(name: 'cognac', category: 'liquor')
 Ingredient.create(name: 'whisky', category: 'liquor')
 Ingredient.create(name: 'vodka', category: 'liquor')
-Ingredient.create(name: 'vadka', category: 'liquor')
 Ingredient.create(name: 'tequila', category: 'liquor')
 
 #Liqueurs
