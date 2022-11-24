@@ -22,8 +22,10 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_22_231912) do
   end
 
   create_table "custom_recipes", force: :cascade do |t|
+    t.bigint "recipe_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["recipe_id"], name: "index_custom_recipes_on_recipe_id"
   end
 
   create_table "ingredients", force: :cascade do |t|
@@ -31,6 +33,25 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_22_231912) do
     t.string "category"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "recipe_types", force: :cascade do |t|
+    t.string "name"
+    t.integer "liquor_ratio"
+    t.integer "liquer_ratio"
+    t.integer "juice_ratio"
+    t.integer "syrup_ratio"
+    t.string "difficulty"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "recipes", force: :cascade do |t|
+    t.string "name"
+    t.bigint "recipe_type_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["recipe_type_id"], name: "index_recipes_on_recipe_type_id"
   end
 
   create_table "tools", force: :cascade do |t|
@@ -73,6 +94,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_22_231912) do
   end
 
   add_foreign_key "custom_recipe_user_ingredients", "user_ingredients"
+  add_foreign_key "custom_recipes", "recipes"
+  add_foreign_key "recipes", "recipe_types"
   add_foreign_key "user_ingredients", "ingredients"
   add_foreign_key "user_ingredients", "users"
   add_foreign_key "user_tools", "tools"
