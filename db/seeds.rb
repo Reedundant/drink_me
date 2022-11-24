@@ -46,7 +46,14 @@ Ingredient.create(name: 'lime juice', category: 'juice')
 Ingredient.create(name: 'pineapple juice', category: 'juice')
 Ingredient.create(name: 'apple juice', category: 'juice')
 
-# pp Ingredient.all
+# Tools
+Tool.create(name: 'shaker', units: 'ml')
+Tool.create(name: 'measuring spoons', units: 'ml')
+
+
+pp Ingredient.all
+
+
 
 puts ""
 puts "> Done generating ingredients! 🥃"
