@@ -1,12 +1,47 @@
 <div class="container">
   <h1>Select all the ingredients you have!</h1>
 
-<ul>
-<% @user_ingredients.each do |x| %>
-  <li>
-    <%= x.ingredient.name %>
-  </li>
-<% end %>
-</ul>
+  <h2>Liquors</h2>
+  <ul class="list-unstyled">
+    <% @user_ingredients.each do |ui| %>
+      <% if ui.ingredient.category == 'liquor' %>
+        <li>
+          <%= ui.ingredient.name %>
+        </li>
+      <% end %>
+    <% end %>
+  </ul>
 
+  <h2>Liqueur</h2>
+  <ul class="list-unstyled">
+    <% @user_ingredients.each do |ui| %>
+      <% if ui.ingredient.category == 'liqueur' %>
+        <li>
+          <%= ui.ingredient.name %>
+        </li>
+      <% end %>
+    <% end %>
+  </ul>
+
+  <h2>Syrups</h2>
+  <ul class="list-unstyled">
+    <% @user_ingredients.each do |ui| %>
+      <% if ui.ingredient.category == 'syrup' %>
+        <li>
+          <%= ui.ingredient.name %>
+        </li>
+      <% end %>
+    <% end %>
+  </ul>
+
+  <h2>Juices / Sodas</h2>
+  <ul class="list-unstyled">
+    <% @user_ingredients.each do |ui| %>
+      <% if ui.ingredient.category == 'juice' %>
+        <li>
+          <%= ui.ingredient.name %>
+        </li>
+      <% end %>
+    <% end %>
+  </ul>
 </div>

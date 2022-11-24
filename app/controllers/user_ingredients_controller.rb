@@ -1,6 +1,7 @@
 class UserIngredientsController < ApplicationController
   def index
     @user_ingredients = UserIngredient.all
+    # raise
   end
 
   def new
