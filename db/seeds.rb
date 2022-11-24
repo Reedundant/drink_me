@@ -1,5 +1,7 @@
 puts "> Destroying all ingredients, and users..."
 Ingredient.destroy_all
+Tool.destroy_all
+UserTool.destroy_all
 User.destroy_all
 puts "> Done destroying all ingredients, and users! "
 
@@ -46,7 +48,195 @@ Ingredient.create(name: 'lime juice', category: 'juice')
 Ingredient.create(name: 'pineapple juice', category: 'juice')
 Ingredient.create(name: 'apple juice', category: 'juice')
 
-# pp Ingredient.all
+# Tools
+Tool.create(name: 'jigger', units: 'oz')
+Tool.create(name: 'measuring spoons', units: 'tsp')
+Tool.create(name: 'measuring cups', units: 'ml')
+Tool.create(name: 'large measurer', units: 'tsp')
+Tool.create(name: 'bar spoon', units: '')
+Tool.create(name: 'strainer', units: '')
+Tool.create(name: 'shaker set', units: '')
+Tool.create(name: 'citrus press', units: '')
+Tool.create(name: 'blowtorch', units: '')
+Tool.create(name: 'muddler', units: '')
+
+
+pp Ingredient.all
+
+# Recipe types
+RecipeType.create(
+  name: 'Duo 1',
+  liquor_ratio: 56,
+  liquer_ratio: 28,
+  difficulty: 'Easy'
+)
+RecipeType.create(
+  name: 'Duo 2',
+  liquor_ratio: 42,
+  liquer_ratio: 42,
+  difficulty: 'Easy'
+)
+
+RecipeType.create(
+  name: 'Trio 1',
+  liquor_ratio: 21,
+  liquer_ratio: 21,
+  liquer2_ratio: 21,
+  difficulty: 'Easy'
+)
+RecipeType.create(
+  name: 'Trio 2',
+  liquor_ratio: 56,
+  liquer_ratio: 14,
+  liquer2_ratio: 14,
+  difficulty: 'Easy'
+)
+RecipeType.create(
+  name: 'Trio 3',
+  liquor_ratio: 56,
+  liquer_ratio: 21,
+  liquer2_ratio: 7,
+  difficulty: 'Easy'
+)
+
+RecipeType.create(
+  name: 'Simple Sour 1',
+  liquor_ratio: 56,
+  juice_ratio: 21,
+  syrup_ratio: 21,
+  difficulty: 'Easy'
+)
+
+RecipeType.create(
+  name: 'Simple Sour 2',
+  liquor_ratio: 42,
+  liquer_ratio: 28,
+  syrup_ratio: 21,
+  juice_ratio: 21,
+  difficulty: 'Medium'
+)
+
+RecipeType.create(
+  name: 'Simple Sour 3',
+  liquor_ratio: 28,
+  liquor2_ratio: 28,
+  juice_ratio: 21,
+  syrup_ratio: 21,
+  difficulty: 'Medium'
+)
+
+RecipeType.create(
+  name: 'Simple Sour 4',
+  liquor_ratio: 14,
+  liquer_ratio: 42,
+  syrup_ratio: 28,
+  juice_ratio: 21,
+  difficulty: 'Medium'
+)
+
+RecipeType.create(
+  name: 'New Orleans Sour 1',
+  liquor_ratio: 42,
+  liquer_ratio: 21,
+  liquer2_ratio: 21,
+  juice_ratio: 14,
+  difficulty: 'Medium'
+)
+
+RecipeType.create(
+  name: 'New Orleans Sour 2',
+  liquor_ratio: 42,
+  liquer_ratio: 21,
+  juice_ratio: 21,
+  syrup_ratio: 21,
+  difficulty: 'Medium'
+)
+
+RecipeType.create(
+  name: 'New Orleans Sour 3',
+  liquor_ratio: 42,
+  liquer_ratio: 21,
+  juice_ratio: 28,
+  syrup_ratio: 14,
+  difficulty: 'Medium'
+)
+
+RecipeType.create(
+  name: 'New Orleans Sour 4 ',
+  liquor_ratio: 56,
+  liquer_ratio: 14,
+  liquer2_ratio: 14,
+  juice_ratio: 7,
+  difficulty: 'Medium'
+)
+
+RecipeType.create(
+  name: 'New Orleans Sour 5 ',
+  liquor_ratio: 21,
+  liquer_ratio: 21,
+  liquer2_ratio: 21,
+  juice_ratio: 21,
+  difficulty: 'Medium'
+)
+
+RecipeType.create(
+  name: 'International Sour 1',
+  liquor_ratio: 56,
+  liquer_ratio: 7,
+  juice_ratio: 21,
+  juice2_ratio: 7,
+  difficulty: 'Medium'
+)
+
+RecipeType.create(
+  name: 'International Sour 2',
+  liquor_ratio: 56,
+  liquer_ratio: 7,
+  juice_ratio: 14,
+  juice2_ratio: 14,
+  difficulty: 'Medium'
+)
+
+RecipeType.create(
+  name: 'International Sour 3',
+  liquor_ratio: 56,
+  liquer_ratio: 7,
+  juice_ratio: 21,
+  juice2_ratio: 7,
+  difficulty: 'Medium'
+)
+
+RecipeType.create(
+  name: 'Tiki 1',
+  liquor_ratio: 56,
+  liquor2_ratio: 28,
+  juice_ratio: 56,
+  juice2_ratio: 14,
+  syrup_ratio: 14,
+  other_ratio: 1,
+  difficulty: 'Hard'
+)
+
+RecipeType.create(
+  name: 'Tiki 2',
+  liquor_ratio: 56,
+  juice_ratio: 21,
+  juice2_ratio: 21,
+  syrup_ratio: 14,
+  other_ratio: 1,
+  difficulty: 'Hard'
+)
+RecipeType.create(
+  name: 'Tiki 2',
+  liquor_ratio: 42,
+  liquor2_ratio: 42,
+  liquer_ratio: 14,
+  juice_ratio: 28,
+  juice2_ratio: 14,
+  syrup_ratio: 14,
+  other_ratio: 1,
+  difficulty: 'Hard'
+)
 
 puts ""
 puts "> Done generating ingredients! 🥃"
