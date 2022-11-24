@@ -53,7 +53,13 @@ Tool.create(name: 'measuring spoons', units: 'ml')
 
 pp Ingredient.all
 
-
+# Recipe types
+RecipeType.create(
+  name: 'Duo',
+  liquor_ratio: 2,
+  liquer_ratio: 1,
+  difficulty: 'Easy'
+)
 
 puts ""
 puts "> Done generating ingredients! 🥃"
