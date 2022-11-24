@@ -16,7 +16,7 @@ class UserToolsController < ApplicationController
 
     @tools.each do |tool|
       @user_tool = UserTool.new(user: @user, tool: tool)
-      render :new, status: 422 and return unless @user_tool.save!
+      render :new, status: 422 and return unless @user_tool.save
     end
 
     redirect_to user_tools_path
