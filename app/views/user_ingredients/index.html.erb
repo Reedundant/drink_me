@@ -1,5 +1,12 @@
 <div class="container">
   <h1>Select all the ingredients you have!</h1>
 
+<ul>
+<% @user_ingredients.each do |x| %>
+  <li>
+    <%= x.ingredient.name %>
+  </li>
+<% end %>
+</ul>
 
 </div>
