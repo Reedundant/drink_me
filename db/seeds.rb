@@ -55,10 +55,177 @@ pp Ingredient.all
 
 # Recipe types
 RecipeType.create(
-  name: 'Duo',
-  liquor_ratio: 2,
-  liquer_ratio: 1,
+  name: 'Duo 1',
+  liquor_ratio: 56,
+  liquer_ratio: 28,
   difficulty: 'Easy'
+)
+RecipeType.create(
+  name: 'Duo 2',
+  liquor_ratio: 42,
+  liquer_ratio: 42,
+  difficulty: 'Easy'
+)
+
+RecipeType.create(
+  name: 'Trio 1',
+  liquor_ratio: 21,
+  liquer_ratio: 21,
+  liquer2_ratio: 21,
+  difficulty: 'Easy'
+)
+RecipeType.create(
+  name: 'Trio 2',
+  liquor_ratio: 56,
+  liquer_ratio: 14,
+  liquer2_ratio: 14,
+  difficulty: 'Easy'
+)
+RecipeType.create(
+  name: 'Trio 3',
+  liquor_ratio: 56,
+  liquer_ratio: 21,
+  liquer2_ratio: 7,
+  difficulty: 'Easy'
+)
+
+RecipeType.create(
+  name: 'Simple Sour 1',
+  liquor_ratio: 56,
+  juice_ratio: 21,
+  syrup_ratio: 21,
+  difficulty: 'Easy'
+)
+
+RecipeType.create(
+  name: 'Simple Sour 2',
+  liquor_ratio: 42,
+  liquer_ratio: 28,
+  syrup_ratio: 21,
+  juice_ratio: 21,
+  difficulty: 'Medium'
+)
+
+RecipeType.create(
+  name: 'Simple Sour 3',
+  liquor_ratio: 28,
+  liquor2_ratio: 28,
+  juice_ratio: 21,
+  syrup_ratio: 21,
+  difficulty: 'Medium'
+)
+
+RecipeType.create(
+  name: 'Simple Sour 4',
+  liquor_ratio: 14,
+  liquer_ratio: 42,
+  syrup_ratio: 28,
+  juice_ratio: 21,
+  difficulty: 'Medium'
+)
+
+RecipeType.create(
+  name: 'New Orleans Sour 1',
+  liquor_ratio: 42,
+  liquer_ratio: 21,
+  liquer2_ratio: 21,
+  juice_ratio: 14,
+  difficulty: 'Medium'
+)
+
+RecipeType.create(
+  name: 'New Orleans Sour 2',
+  liquor_ratio: 42,
+  liquer_ratio: 21,
+  juice_ratio: 21,
+  syrup_ratio: 21,
+  difficulty: 'Medium'
+)
+
+RecipeType.create(
+  name: 'New Orleans Sour 3',
+  liquor_ratio: 42,
+  liquer_ratio: 21,
+  juice_ratio: 28,
+  syrup_ratio: 14,
+  difficulty: 'Medium'
+)
+
+RecipeType.create(
+  name: 'New Orleans Sour 4 ',
+  liquor_ratio: 56,
+  liquer_ratio: 14,
+  liquer2_ratio: 14,
+  juice_ratio: 7,
+  difficulty: 'Medium'
+)
+
+RecipeType.create(
+  name: 'New Orleans Sour 5 ',
+  liquor_ratio: 21,
+  liquer_ratio: 21,
+  liquer2_ratio: 21,
+  juice_ratio: 21,
+  difficulty: 'Medium'
+)
+
+RecipeType.create(
+  name: 'International Sour 1',
+  liquor_ratio: 56,
+  liquer_ratio: 7,
+  juice_ratio: 21,
+  juice2_ratio: 7,
+  difficulty: 'Medium'
+)
+
+RecipeType.create(
+  name: 'International Sour 2',
+  liquor_ratio: 56,
+  liquer_ratio: 7,
+  juice_ratio: 14,
+  juice2_ratio: 14,
+  difficulty: 'Medium'
+)
+
+RecipeType.create(
+  name: 'International Sour 3',
+  liquor_ratio: 56,
+  liquer_ratio: 7,
+  juice_ratio: 21,
+  juice2_ratio: 7,
+  difficulty: 'Medium'
+)
+
+RecipeType.create(
+  name: 'Tiki 1',
+  liquor_ratio: 56,
+  liquor2_ratio: 28,
+  juice_ratio: 56,
+  juice2_ratio: 14,
+  syrup_ratio: 14,
+  other_ratio: 1,
+  difficulty: 'Hard'
+)
+
+RecipeType.create(
+  name: 'Tiki 2',
+  liquor_ratio: 56,
+  juice_ratio: 21,
+  juice2_ratio: 21,
+  syrup_ratio: 14,
+  other_ratio: 1,
+  difficulty: 'Hard'
+)
+RecipeType.create(
+  name: 'Tiki 2',
+  liquor_ratio: 42,
+  liquor2_ratio: 42,
+  liquer_ratio: 14,
+  juice_ratio: 28,
+  juice2_ratio: 14,
+  syrup_ratio: 14,
+  other_ratio: 1,
+  difficulty: 'Hard'
 )
 
 puts ""
