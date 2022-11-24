@@ -1,6 +1,7 @@
 class UserIngredientsController < ApplicationController
   def new
     @user_ingredient = UserIngredient.new
+    @user = current_user
 
     @liquors = Ingredient.where(category: 'liquor')
     @liqueurs = Ingredient.where(category: 'liqueur')
@@ -8,29 +9,19 @@ class UserIngredientsController < ApplicationController
     @juices = Ingredient.where(category: 'juice')
   end
 
-  # Loop over the get_ingredient_ids, find ingredient that belongs to the id
-  # with found ingredient, CREATE NEW USER INGREDIENT
-  # UserIngredient.new({
-    # user: user goes here,
-    # ingredient: ingredient goes here
-  #})
-  # def fetch_ingredients
-  #   user_ingredient_params["user_ingredient"]["ingredient_id"].each do |id|
-  #     Ingredient.find(id)
-  #   end
-  # end
-
   def create
-    # binding.break
+    binding.break
+    # @user_ingredient.ingredient = Ingredient.find(23)
+    @user_ingredient = UserIngredient.new(user_ingredient_params)
 
-    # @user_ingredient.ingredient = Ingredient.find(268)
-    @user_ingredient = UserIngredient.new(store_ingredient_ids)
-    # @user_ingredient.ingredient = Ingredient.find(fetch_ingredients)
+    ids = params["user_ingredient"]["ingredient_id"]
+    filtered_ids = ids.select { |id| id.present? }
+
+    filtered_ids.each do |id|
+      @user_ingredient.ingredient = Ingredient.find(id)
+    end
+
     @user_ingredient.user = current_user
-    # @user_ingredient.ingredient = user_ingredient_params.each do |id|
-    #   Ingredient.find(id)
-    # end
-    # raise
 
     if @user_ingredient.save
       redirect_to new_user_ingredient_path, notice: "works!"
@@ -43,10 +34,29 @@ class UserIngredientsController < ApplicationController
 
   def user_ingredient_params
     params.require(:user_ingredient).permit(:ingredient_id)
+    # binding.break
   end
 
-  def store_ingredient_ids
-    user_ingredient_params["ingredient_id"]
-    # user_ingredient_params["ingredient_id"].select { |id| id.present? }
-  end
+  # RAISE: private method `select' called for nil:NilClass
+  # def filter_ingredient_ids
+  #   user_ingredient_params["ingredient_id"].select { |id| id.present? }
+  # end
 end
+
+ # Loop over the get_ingredient_ids, find ingredient that belongs to the id
+  # with found ingredient, CREATE NEW USER INGREDIENT
+  # UserIngredient.new({
+    # user: user goes here,
+    # ingredient: ingredient goes here
+  #})
+
+  # def fetch_ingredients
+  #   # binding.break
+  #   raise
+  #   # user_ingredient_params.each do |id|
+  #   #   Ingredient.find(id)
+  #   # end
+
+  #   # params["user_ingredient"]["ingredient_id"]
+  # end
+  # pp fetch_ingredients
