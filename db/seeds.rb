@@ -1,5 +1,7 @@
 puts "> Destroying all ingredients, and users..."
 Ingredient.destroy_all
+Tool.destroy_all
+UserTool.destroy_all
 User.destroy_all
 puts "> Done destroying all ingredients, and users! "
 
@@ -47,8 +49,16 @@ Ingredient.create(name: 'pineapple juice', category: 'juice')
 Ingredient.create(name: 'apple juice', category: 'juice')
 
 # Tools
-Tool.create(name: 'shaker', units: 'ml')
-Tool.create(name: 'measuring spoons', units: 'ml')
+Tool.create(name: 'jigger', units: 'oz')
+Tool.create(name: 'measuring spoons', units: 'tsp')
+Tool.create(name: 'measuring cups', units: 'ml')
+Tool.create(name: 'large measurer', units: 'tsp')
+Tool.create(name: 'bar spoon', units: '')
+Tool.create(name: 'strainer', units: '')
+Tool.create(name: 'shaker set', units: '')
+Tool.create(name: 'citrus press', units: '')
+Tool.create(name: 'blowtorch', units: '')
+Tool.create(name: 'muddler', units: '')
 
 
 pp Ingredient.all
