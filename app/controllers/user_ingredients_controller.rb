@@ -1,4 +1,8 @@
 class UserIngredientsController < ApplicationController
+  def index
+    @user_ingredients = UserIngredient.all
+  end
+
   def new
     @user_ingredient = UserIngredient.new
     @user = current_user
