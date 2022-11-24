@@ -238,5 +238,7 @@ RecipeType.create(
   difficulty: 'Hard'
 )
 
+pp RecipeType.all
+
 puts ""
 puts "> Done generating ingredients! 🥃"
