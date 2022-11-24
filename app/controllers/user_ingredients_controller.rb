@@ -1,7 +1,6 @@
 class UserIngredientsController < ApplicationController
   def index
     @user_ingredients = UserIngredient.all
-    # raise
   end
 
   def new
@@ -29,6 +28,11 @@ class UserIngredientsController < ApplicationController
     end
 
     redirect_to user_ingredients_path, notice: "works!"
+  end
+
+  def edit
+    @user_ingredient = UserIngredient.new
+    @user = current_user
   end
 
   private
