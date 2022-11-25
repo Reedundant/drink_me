@@ -247,5 +247,7 @@ RecipeType.create(
 
 pp RecipeType.all
 
+Recipe.new(name: "Eat My Hat!")
+
 puts ""
 puts "> Done generating ingredients! 🥃"
