@@ -8,7 +8,7 @@
       <% @liquors.each do |liquor| %>
         <li>
           <div style="width: 120px; height: 80px; border: 1px solid lightgray; display: flex; justify-content: center; align-items: center; border-radius: 5px;">
-            <p style="text-align: center; margin-bottom: 0;"><%= link_to liquor.name, new_user_tool_path %></p>
+            <p style="text-align: center; margin-bottom: 0;"><%=  liquor.name  %></p>
           </div>
         </li>
       <% end %>
@@ -21,7 +21,7 @@
       <% @liqueurs.each do |liqueur| %>
         <li>
           <div style="width: 120px; height: 80px; border: 1px solid lightgray; display: flex; justify-content: center; align-items: center; border-radius: 5px;">
-            <p style="text-align: center; margin-bottom: 0;"><%= link_to liqueur.name, new_user_tool_path %></p>
+            <p style="text-align: center; margin-bottom: 0;"><%=  liqueur.name  %></p>
           </div>
         </li>
       <% end %>
@@ -34,7 +34,7 @@
       <% @syrups.each do |syrup| %>
         <li>
           <div style="width: 120px; height: 80px; border: 1px solid lightgray; display: flex; justify-content: center; align-items: center; border-radius: 5px;">
-            <p style="text-align: center; margin-bottom: 0;"><%= link_to syrup.name, new_user_tool_path %></p>
+            <p style="text-align: center; margin-bottom: 0;"><%=  syrup.name  %></p>
           </div>
         </li>
       <% end %>
@@ -47,13 +47,13 @@
       <% @juices.each do |juice| %>
         <li>
           <div style="width: 120px; height: 80px; border: 1px solid lightgray; display: flex; justify-content: center; align-items: center; border-radius: 5px;">
-            <p style="text-align: center; margin-bottom: 0;"><%= link_to juice.name, new_user_tool_path %></p>
+            <p style="text-align: center; margin-bottom: 0;"><%=  juice.name  %></p>
           </div>
         </li>
       <% end %>
     </ul>
   </div>
+  <div class="ingred-button">
+  <%= link_to "Next", new_user_tool_path, class: "btn btn-primary col-12" %>
 </div>
-<div class="ingred-button">
-  <a class="btn btn-gradient" href="/user_tools/new">Next</a>
 </div>

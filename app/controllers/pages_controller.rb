@@ -6,4 +6,7 @@ class PagesController < ApplicationController
 
   def suggestion
   end
+
+  def results
+  end
 end
