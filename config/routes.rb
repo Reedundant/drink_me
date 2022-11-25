@@ -8,6 +8,7 @@ Rails.application.routes.draw do
 
   resources :user_ingredients, except: :show
   resources :user_tools, only:[:new, :create, :index]
+  get 'pages/suggestion', to: "pages#suggestion", as: :suggestion
   
   get '/user_ingredients/edit_selection', to: "user_ingredients#edit_selection"
   patch '/user_ingredients/update_selection', to: "user_ingredients#update_selection"
