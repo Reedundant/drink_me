@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   resources :user_ingredients, except: :show
   resources :user_tools, only:[:new, :create, :index]
   get 'pages/suggestion', to: "pages#suggestion", as: :suggestion
-  
+  get 'pages/results', to: "pages#results", as: :results
 
   resources :user_tools, only: %I[new create index]
 
