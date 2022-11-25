@@ -4,9 +4,6 @@
 
       <%= simple_form_for([@user_tool]) do |f| %>
         <%= f.association :tool, input_html: { multiple: true }, include_hidden: false %>
-        <%= f.submit 'Tool!', class: 'btn btn-secondary' %>
+        <%= f.submit 'Next!', class: 'btn btn-secondary col-12' %>
       <% end %>
-</div>
-<div>
-  <%= link_to 'Next', suggestion_path, class: "btn btn-gradient" %>
 </div>
