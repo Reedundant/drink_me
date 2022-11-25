@@ -1,5 +1,5 @@
 class RecipesController < ApplicationController
-  def eat_my_hat
+  def under_your_nose
     @recipes = Recipe.all
   end
 end

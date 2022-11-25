@@ -17,7 +17,7 @@ Rails.application.routes.draw do
   get '/bookings/unselect', to: 'user_ingredients#unselect', as: :unselect_ingredient
   get '/bookings/select', to: 'user_ingredients#select', as: :select_ingredient
 
-  get 'recipes/eat_my_hat', to: 'recipes#eat_my_hat', as: :eat_my_hat
+  get 'recipes/under_your_nose', to: 'recipes#under_your_nose', as: :under_your_nose
 
   resources :recipes, only: :show do
     resources :custom_recipes, only: %I[show new create]
