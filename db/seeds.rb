@@ -233,7 +233,7 @@ RecipeType.create(
   other_ratio: 1,
   difficulty: 'Hard'
 )
-RecipeType.create(
+recipetype = RecipeType.create(
   name: 'Tiki 2',
   liquor_ratio: 42,
   liquor2_ratio: 42,
@@ -246,6 +246,9 @@ RecipeType.create(
 )
 
 pp RecipeType.all
+
+Recipe.create!(name: "Under Your Nose", recipe_type: recipetype)
+pp Recipe.all
 
 puts ""
 puts "> Done generating ingredients! 🥃"
