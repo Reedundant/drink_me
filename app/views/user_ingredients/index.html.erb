@@ -1,51 +1,58 @@
-<div class="container">
-  <h1>Select eeeeeeee all the ingredients you have!</h1>
+
+<div class="container" style="justify-content: flex-start;">
+  <h1>Select all the ingredients you have!</h1>
 
   <h2>Liquors</h2>
-  <ul class="list-unstyled">
-    <% @user_ingredients.each do |ui| %>
-      <% if ui.ingredient.category == 'liquor' %>
+  <div class="liquors" style="width: 80%; margin-bottom: 3rem;">
+    <ul class="list-unstyled" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem;">
+      <% @liquors.each do |liquor| %>
         <li>
-          <%= ui.ingredient.name %>
+          <div style="width: 120px; height: 80px; border: 1px solid lightgray; display: flex; justify-content: center; align-items: center; border-radius: 5px;">
+            <p style="text-align: center; margin-bottom: 0;"><%= link_to liquor.name, new_user_tool_path %></p>
+          </div>
         </li>
       <% end %>
-    <% end %>
-  </ul>
+    </ul>
+  </div>
 
-  <h2>Liqueur</h2>
-  <ul class="list-unstyled">
-    <% @user_ingredients.each do |ui| %>
-      <% if ui.ingredient.category == 'liqueur' %>
+  <h2>Liqueurs</h2>
+  <div class="liqueurs" style="width: 80%; margin-bottom: 3rem;">
+    <ul class="list-unstyled" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem;">
+      <% @liqueurs.each do |liqueur| %>
         <li>
-          <%= ui.ingredient.name %>
+          <div style="width: 120px; height: 80px; border: 1px solid lightgray; display: flex; justify-content: center; align-items: center; border-radius: 5px;">
+            <p style="text-align: center; margin-bottom: 0;"><%= link_to liqueur.name, new_user_tool_path %></p>
+          </div>
         </li>
       <% end %>
-    <% end %>
-  </ul>
+    </ul>
+  </div>
 
   <h2>Syrups</h2>
-  <ul class="list-unstyled">
-    <% @user_ingredients.each do |ui| %>
-      <% if ui.ingredient.category == 'syrup' %>
+  <div class="syrups" style="width: 80%; margin-bottom: 3rem;">
+    <ul class="list-unstyled" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem;">
+      <% @syrups.each do |syrup| %>
         <li>
-          <%= ui.ingredient.name %>
+          <div style="width: 120px; height: 80px; border: 1px solid lightgray; display: flex; justify-content: center; align-items: center; border-radius: 5px;">
+            <p style="text-align: center; margin-bottom: 0;"><%= link_to syrup.name, new_user_tool_path %></p>
+          </div>
         </li>
       <% end %>
-    <% end %>
-  </ul>
+    </ul>
+  </div>
 
-  <h2>Juices / Sodas</h2>
-  <ul class="list-unstyled">
-    <% @user_ingredients.each do |ui| %>
-      <% if ui.ingredient.category == 'juice' %>
+  <h2>Juices</h2>
+  <div class="juices" style="width: 80%; margin-bottom: 3rem;">
+    <ul class="list-unstyled" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem;">
+      <% @juices.each do |juice| %>
         <li>
-          <%= ui.ingredient.name %>
+          <div style="width: 120px; height: 80px; border: 1px solid lightgray; display: flex; justify-content: center; align-items: center; border-radius: 5px;">
+            <p style="text-align: center; margin-bottom: 0;"><%= link_to juice.name, new_user_tool_path %></p>
+          </div>
         </li>
       <% end %>
-    <% end %>
-  </ul>
-
-  <%= link_to "Edit", user_ingredients_edit_selection_path %>
+    </ul>
+  </div>
 </div>
 <div class="ingred-button">
   <a class="btn btn-gradient" href="/user_tools/new">Next</a>

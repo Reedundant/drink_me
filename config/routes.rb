@@ -5,16 +5,17 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
-
+  
+  resources :user_ingredients, only: %i[index new create]
   resources :user_ingredients, except: :show
   resources :user_tools, only:[:new, :create, :index]
   get 'pages/suggestion', to: "pages#suggestion", as: :suggestion
   
 
   resources :user_tools, only: %I[new create index]
-
-  get '/user_ingredients/edit_selection', to: "user_ingredients#edit_selection"
-  patch '/user_ingredients/update_selection', to: "user_ingredients#update_selection"
+  
+  get '/bookings/unselect', to: 'user_ingredients#unselect', as: :unselect_ingredient
+  get '/bookings/select', to: 'user_ingredients#select', as: :select_ingredient
 
   resources :recipes, only: :show do
     resources :custom_recipes, only: %I[show new create]
