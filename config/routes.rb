@@ -5,8 +5,13 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
-
+  
   resources :user_ingredients, only: %i[index new create]
+  resources :user_ingredients, except: :show
+  resources :user_tools, only:[:new, :create, :index]
+  get 'pages/suggestion', to: "pages#suggestion", as: :suggestion
+  
+
   resources :user_tools, only: %I[new create index]
   
   get '/bookings/unselect', to: 'user_ingredients#unselect', as: :unselect_ingredient
