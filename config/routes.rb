@@ -7,6 +7,10 @@ Rails.application.routes.draw do
   # root "articles#index"
 
   resources :user_ingredients, except: :show
+  resources :user_tools, only:[:new, :create, :index]
+  get 'pages/suggestion', to: "pages#suggestion", as: :suggestion
+  
+
   resources :user_tools, only: %I[new create index]
 
   get '/user_ingredients/edit_selection', to: "user_ingredients#edit_selection"

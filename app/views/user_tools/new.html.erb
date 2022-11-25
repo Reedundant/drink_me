@@ -1,9 +1,12 @@
 
 <div>
-<h1>Add a Tool</h1>
+<h1>Do You Have Any Of These?</h1>
 
       <%= simple_form_for([@user_tool]) do |f| %>
         <%= f.association :tool, input_html: { multiple: true }, include_hidden: false %>
         <%= f.submit 'Tool!', class: 'btn btn-secondary' %>
       <% end %>
+</div>
+<div>
+  <%= link_to 'Next', suggestion_path, class: "btn btn-gradient" %>
 </div>
