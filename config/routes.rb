@@ -7,9 +7,12 @@ Rails.application.routes.draw do
   # root "articles#index"
 
   resources :user_ingredients, except: :show
-  resources :user_tools, only:[:new, :create, :index]
-  
+  resources :user_tools, only: %I[new create index]
+
   get '/user_ingredients/edit_selection', to: "user_ingredients#edit_selection"
   patch '/user_ingredients/update_selection', to: "user_ingredients#update_selection"
-  
+
+  resources :recipes, only: :show do
+    resources :custom_recipes, only: %I[show new create]
+  end
 end
