@@ -19,7 +19,7 @@ class UserToolsController < ApplicationController
       render :new, status: 422 and return unless @user_tool.save
     end
 
-    redirect_to user_tools_path
+    redirect_to suggestion_path
 
   end
 
