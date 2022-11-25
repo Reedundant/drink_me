@@ -1,23 +1,13 @@
 class UserIngredientsController < ApplicationController
+  before_action :set_categories, only: %i[index new unselect select]
   def index
     @user_ingredients = UserIngredient.all
-    # @ingredients = Ingredient.all
     @user = current_user
-
-    @liquors = Ingredient.where(category: 'liquor')
-    @liqueurs = Ingredient.where(category: 'liqueur')
-    @syrups = Ingredient.where(category: 'syrup')
-    @juices = Ingredient.where(category: 'juice')
   end
 
   def new
     @user_ingredient = UserIngredient.new
     @user = current_user
-
-    @liquors = Ingredient.where(category: 'liquor')
-    @liqueurs = Ingredient.where(category: 'liqueur')
-    @syrups = Ingredient.where(category: 'syrup')
-    @juices = Ingredient.where(category: 'juice')
   end
 
   def create
@@ -31,7 +21,20 @@ class UserIngredientsController < ApplicationController
     redirect_to user_ingredients_path
   end
 
+  def unselect
+  end
+
+  def select
+  end
+
   private
+
+  def set_categories
+    @liquors = Ingredient.where(category: 'liquor')
+    @liqueurs = Ingredient.where(category: 'liqueur')
+    @syrups = Ingredient.where(category: 'syrup')
+    @juices = Ingredient.where(category: 'juice')
+  end
 
   def user_ingredient_params
     params.require(:user_ingredient).permit(:ingredient_id)
