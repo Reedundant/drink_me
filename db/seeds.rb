@@ -20,13 +20,20 @@ puts ""
 
 # Liquors
 # rum, gin, scotch, cognac, whisky, vodka, vadka, tequila
-Ingredient.create(name: 'rum', category: 'liquor')
+Ingredient.create(name: 'white rum', category: 'liquor')
 Ingredient.create(name: 'gin', category: 'liquor')
 Ingredient.create(name: 'scotch', category: 'liquor')
 Ingredient.create(name: 'cognac', category: 'liquor')
-Ingredient.create(name: 'whisky', category: 'liquor')
+Ingredient.create(name: 'bourbon', category: 'liquor')
 Ingredient.create(name: 'vodka', category: 'liquor')
-Ingredient.create(name: 'tequila', category: 'liquor')
+Ingredient.create(name: 'blanco tequila', category: 'liquor')
+Ingredient.create(name: 'reposado tequila', category: 'liquor')
+Ingredient.create(name: 'anejo tequila', category: 'liquor')
+Ingredient.create(name: 'brandy', category: 'liquor')
+Ingredient.create(name: 'dark rum', category: 'liquor')
+Ingredient.create(name: 'spiced rum', category: 'liquor')
+Ingredient.create(name: 'rye', category: 'liquor')
+Ingredient.create(name: 'irish whiskey', category: 'liquor')
 
 #Liqueurs
 # coffee liqueur, amaro, herbal liqueur, sweet vermouth, dry vermouth, aperitif, cointreau
@@ -237,6 +244,8 @@ RecipeType.create(
   other_ratio: 1,
   difficulty: 'Hard'
 )
+
+pp RecipeType.all
 
 puts ""
 puts "> Done generating ingredients! 🥃"
