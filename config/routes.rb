@@ -7,9 +7,12 @@ Rails.application.routes.draw do
   # root "articles#index"
 
   resources :user_ingredients, only: %i[index new create]
-  resources :user_tools, only:[:new, :create, :index]
-
+  resources :user_tools, only: %I[new create index]
+  
   get '/bookings/unselect', to: 'user_ingredients#unselect', as: :unselect_ingredient
   get '/bookings/select', to: 'user_ingredients#select', as: :select_ingredient
 
+  resources :recipes, only: :show do
+    resources :custom_recipes, only: %I[show new create]
+  end
 end
