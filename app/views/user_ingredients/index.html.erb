@@ -1,49 +1,47 @@
 <div class="container">
   <h1>Select all the ingredients you have!</h1>
 
-  <h2>Liquors</h2>
-  <ul class="list-unstyled">
-    <% @user_ingredients.each do |ui| %>
-      <% if ui.ingredient.category == 'liquor' %>
+  <div class="liquors">
+    <h2>Liquors</h2>
+    <ul>
+      <% @liquors.each do |liquor| %>
         <li>
-          <%= ui.ingredient.name %>
+          <%= liquor.name %>
         </li>
       <% end %>
-    <% end %>
-  </ul>
+    </ul>
+  </div>
 
-  <h2>Liqueur</h2>
-  <ul class="list-unstyled">
-    <% @user_ingredients.each do |ui| %>
-      <% if ui.ingredient.category == 'liqueur' %>
+  <div class="liqueurs">
+    <h2>Liqueurs</h2>
+    <ul>
+      <% @liqueurs.each do |liqueur| %>
         <li>
-          <%= ui.ingredient.name %>
+          <%= liqueur.name %>
         </li>
       <% end %>
-    <% end %>
-  </ul>
+    </ul>
+  </div>
 
-  <h2>Syrups</h2>
-  <ul class="list-unstyled">
-    <% @user_ingredients.each do |ui| %>
-      <% if ui.ingredient.category == 'syrup' %>
+  <div class="syrups">
+    <h2>Syrups</h2>
+    <ul>
+      <% @syrups.each do |syrup| %>
         <li>
-          <%= ui.ingredient.name %>
+          <%= syrup.name %>
         </li>
       <% end %>
-    <% end %>
-  </ul>
+    </ul>
+  </div>
 
-  <h2>Juices / Sodas</h2>
-  <ul class="list-unstyled">
-    <% @user_ingredients.each do |ui| %>
-      <% if ui.ingredient.category == 'juice' %>
+  <div class="juices">
+    <h2>Juices</h2>
+    <ul>
+      <% @juices.each do |juice| %>
         <li>
-          <%= ui.ingredient.name %>
+          <%= juice.name %>
         </li>
       <% end %>
-    <% end %>
-  </ul>
-
-  <%= link_to "Edit", user_ingredients_edit_selection_path %>
+    </ul>
+  </div>
 </div>
