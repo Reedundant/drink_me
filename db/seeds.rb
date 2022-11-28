@@ -24,7 +24,7 @@ require_relative 'api_call_ingredients'
 # Call method from api_call_ingredients ()
 api_call_ingredients
 
-pp Ingredient.count
+# pp Ingredient.count
 
 puts ""
 puts "> Done generating ingredients! 🥃"
