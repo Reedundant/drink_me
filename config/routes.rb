@@ -3,7 +3,9 @@ Rails.application.routes.draw do
   root to: "pages#home"
 
   resources :user_ingredients, except: :show
-  # resources :user_tools, only:[:new, :create, :index]
+ 
+  get '/user_ingredients/:id/toggle_selected', to: 'user_ingredients#toggle_selected', as: :toggle_selected
+  
   get 'pages/suggestion', to: "pages#suggestion", as: :suggestion
 
   get 'pages/results', to: "pages#results", as: :results
