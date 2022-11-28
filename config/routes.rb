@@ -1,14 +1,12 @@
 Rails.application.routes.draw do
   devise_for :users
   root to: "pages#home"
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+  get '/verify', to: 'pages#verify'
 
-  # Defines the root path route ("/")
-  # root "articles#index"
   resources :user_ingredients, only: :index
   get '/user_ingredients/:id/toggle_selected', to: 'user_ingredients#toggle_selected', as: :toggle_selected
 
-  resources :user_tools, only:[:new, :create, :index]
+  resources :user_tools, only: %I[new create index]
   get 'pages/suggestion', to: "pages#suggestion", as: :suggestion
 
   get 'pages/results', to: "pages#results", as: :results
