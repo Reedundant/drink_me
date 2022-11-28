@@ -1,12 +1,12 @@
 require_relative 'api_call_ingredients'
 
-puts "> Destroying all ingredients, and users..."
+puts "> Destroying all instances..."
 Recipe.destroy_all
 UserIngredient.destroy_all
 Ingredient.destroy_all
 User.destroy_all
 
-puts "> Done destroying all ingredients, and users! "
+puts "> Done destroying all instances! "
 
 puts "> Generating users..."
 puts ""
@@ -17,7 +17,7 @@ pp User.all
 puts ""
 puts "> Done generating users! 👤"
 
-puts "> Generating ingredients..."
+puts "> Generating ingredients & user ingredients..."
 puts ""
 
 # Call method from api_call_ingredients
@@ -32,6 +32,6 @@ end
 pp UserIngredient.all
 
 puts ""
-puts "> Done generating ingredients! 🥃"
+puts "> Done generating ingredients & user ingredients! 🥃"
 
 # Recipe.create!(name: "Under Your Nose", recipe_type: recipetype)
