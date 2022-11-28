@@ -76,6 +76,12 @@ Tool.create(name: 'muddler', units: '')
 
 pp Ingredient.all
 
+# Pass ingredients in user Jack Torrance's ingredients
+ingredients = Ingredient.all
+ingredients.each do |i|
+  UserIngredient.create(ingredient: i, user: User.first)
+end
+
 # Recipe types
 RecipeType.create(
   name: 'Duo 1',
