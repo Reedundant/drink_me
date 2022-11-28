@@ -58,8 +58,9 @@
 }
 
 .container {
+  padding: 7rem 1rem;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   height: 100vh;
   flex-wrap: nowrap;
