@@ -7,6 +7,7 @@ $white: #FFFAFB;
   width: 100%;
   height: auto;
   padding: 2rem 1rem;
+  text-align: center;
 
   h1 {
     font-weight: 300;
@@ -48,6 +49,11 @@ $white: #FFFAFB;
           border-color: goldenrod;
         }
       }
+    }
+
+    &__btn {
+      text-align: center;
+      font-size: 2rem;
     }
   }
 }
