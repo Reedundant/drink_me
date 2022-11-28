@@ -19,7 +19,6 @@ puts "> Generating ingredients..."
 puts ""
 
 # Liquors
-# rum, gin, scotch, cognac, whisky, vodka, vadka, tequila
 Ingredient.create(name: 'white rum', category: 'liquor', url_path: 'ingredient_icons-svgs/svg-liquors/rum.svg')
 Ingredient.create(name: 'gin', category: 'liquor', url_path: 'ingredient_icons-svgs/svg-liquors/gin.svg')
 Ingredient.create(name: 'scotch', category: 'liquor', url_path: 'ingredient_icons-svgs/svg-liquors/brandy.svg')
@@ -31,36 +30,36 @@ Ingredient.create(name: 'reposado tequila', category: 'liquor', url_path: 'ingre
 Ingredient.create(name: 'anejo tequila', category: 'liquor', url_path: 'ingredient_icons-svgs/svg-liquors/fireball.svg')
 
 #Liqueurs
-Ingredient.create(name: 'triple sec', category: 'liqueur', url_path: '')
-Ingredient.create(name: 'herbal liqueur', category: 'liqueur', url_path: '')
-Ingredient.create(name: 'amaro', category: 'liqueur', url_path: '')
-Ingredient.create(name: 'dry vermouth', category: 'liqueur', url_path: '')
-Ingredient.create(name: 'cointreau', category: 'liqueur', url_path: '')
-Ingredient.create(name: 'campari', category: 'liqueur', url_path: '')
-Ingredient.create(name: 'frangelico', category: 'liqueur', url_path: '')
-Ingredient.create(name: 'coffee liqueur', category: 'liqueur', url_path: '')
-Ingredient.create(name: 'sake', category: 'liqueur', url_path: '')
+Ingredient.create(name: 'triple sec', category: 'liqueur', url_path: 'ingredient_icons-svgs/svg-liqueurs/triple-sec.svg')
+Ingredient.create(name: 'herbal liqueur', category: 'liqueur', url_path: 'ingredient_icons-svgs/svg-liqueurs/herbal-liqueur.svg')
+Ingredient.create(name: 'amaro', category: 'liqueur', url_path: 'ingredient_icons-svgs/svg-liqueurs/amaro.svg')
+Ingredient.create(name: 'dry vermouth', category: 'liqueur', url_path: 'ingredient_icons-svgs/svg-liqueurs/dry-vermouth.svg')
+Ingredient.create(name: 'cointreau', category: 'liqueur', url_path: 'ingredient_icons-svgs/svg-liqueurs/cointreau.svg')
+Ingredient.create(name: 'campari', category: 'liqueur', url_path: 'ingredient_icons-svgs/svg-liqueurs/campari.svg')
+Ingredient.create(name: 'frangelico', category: 'liqueur', url_path: 'ingredient_icons-svgs/svg-liqueurs/frangelico.svg')
+Ingredient.create(name: 'coffee liqueur', category: 'liqueur', url_path: 'ingredient_icons-svgs/svg-liqueurs/coffee-liqueur.svg')
+Ingredient.create(name: 'sake', category: 'liqueur', url_path: 'ingredient_icons-svgs/svg-liqueurs/sake.svg')
 
 # Syrups
-Ingredient.create(name: 'brown sugar', category: 'syrup')
-Ingredient.create(name: 'maple', category: 'syrup')
-Ingredient.create(name: 'honey', category: 'syrup')
-Ingredient.create(name: 'flavoured syrup', category: 'syrup')
-Ingredient.create(name: 'white sugar', category: 'syrup')
-Ingredient.create(name: 'fruit preserve', category: 'syrup')
-Ingredient.create(name: 'ginger', category: 'syrup')
-Ingredient.create(name: 'cinnamon', category: 'syrup')
+Ingredient.create(name: 'brown sugar', category: 'syrup', url_path: 'ingredient_icons-svgs/svg-syrups/brown-sugar.svg')
+Ingredient.create(name: 'maple', category: 'syrup', url_path: 'ingredient_icons-svgs/svg-syrups/maple.svg')
+Ingredient.create(name: 'honey', category: 'syrup', url_path: 'ingredient_icons-svgs/svg-syrups/honey.svg')
+Ingredient.create(name: 'flavoured syrup', category: 'syrup', url_path: 'ingredient_icons-svgs/svg-syrups/flavoured-syrup.svg')
+Ingredient.create(name: 'white sugar', category: 'syrup', url_path: 'ingredient_icons-svgs/svg-syrups/white-sugar.svg')
+Ingredient.create(name: 'fruit preserve', category: 'syrup', url_path: 'ingredient_icons-svgs/svg-syrups/fruit-preserve.svg')
+Ingredient.create(name: 'ginger', category: 'syrup', url_path: 'ingredient_icons-svgs/svg-syrups/ginger.svg')
+Ingredient.create(name: 'cinnamon', category: 'syrup', url_path: 'ingredient_icons-svgs/svg-syrups/cinnamon.svg')
 
 # Juices
-Ingredient.create(name: 'lime', category: 'juice')
-Ingredient.create(name: 'lemon', category: 'juice')
-Ingredient.create(name: 'grapefruit', category: 'juice')
-Ingredient.create(name: 'orange', category: 'juice')
-Ingredient.create(name: 'apple', category: 'juice')
-Ingredient.create(name: 'cranberry', category: 'juice')
-Ingredient.create(name: 'pineapple', category: 'juice')
-Ingredient.create(name: 'mango', category: 'juice')
-Ingredient.create(name: 'grape', category: 'juice')
+Ingredient.create(name: 'lime', category: 'juice', url_path: 'ingredient_icons-svgs/svg-juices/lime.svg')
+Ingredient.create(name: 'lemon', category: 'juice', url_path: 'ingredient_icons-svgs/svg-juices/lemon.svg')
+Ingredient.create(name: 'grapefruit', category: 'juice', url_path: 'ingredient_icons-svgs/svg-juices/grapefruit.svg')
+Ingredient.create(name: 'orange', category: 'juice', url_path: 'ingredient_icons-svgs/svg-juices/orange.svg')
+Ingredient.create(name: 'apple', category: 'juice', url_path: 'ingredient_icons-svgs/svg-juices/apple.svg')
+Ingredient.create(name: 'cranberry', category: 'juice', url_path: 'ingredient_icons-svgs/svg-juices/cranberry.svg')
+Ingredient.create(name: 'pineapple', category: 'juice', url_path: 'ingredient_icons-svgs/svg-juices/pineapple.svg')
+Ingredient.create(name: 'mango', category: 'juice', url_path: 'ingredient_icons-svgs/svg-juices/mango.svg')
+Ingredient.create(name: 'grape', category: 'juice', url_path: 'ingredient_icons-svgs/svg-juices/grape.svg')
 
 # Tools
 Tool.create(name: 'jigger', units: 'oz')
