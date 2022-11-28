@@ -5,9 +5,9 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
+  resources :user_ingredients, only: :index
+  get '/user_ingredients/:id/toggle_selected', to: 'user_ingredients#toggle_selected', as: :toggle_selected
 
-  resources :user_ingredients, only: %i[index new create]
-  resources :user_ingredients, except: :show
   resources :user_tools, only:[:new, :create, :index]
   get 'pages/suggestion', to: "pages#suggestion", as: :suggestion
 
