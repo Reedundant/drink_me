@@ -32,9 +32,9 @@
   color: white;
   text-align: center;
   font-weight: 200;
-  font-size: 3.625rem;
+  font-size: 15vmin;
   text-transform: uppercase;
-  // letter-spacing: 1rem;
+  margin-bottom: 0;
 }
 
 .btn-ghost {
@@ -58,7 +58,6 @@
 }
 
 .container {
-
   display: flex;
   justify-content: space-around;
   align-items: center;
