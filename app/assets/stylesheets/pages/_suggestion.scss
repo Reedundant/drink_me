@@ -1,8 +1,8 @@
-.banner {
-    background-size: cover;
-    background-position: center;
-    padding: 150px 0;
-  }
+// .banner {
+//     background-size: cover;
+//     background-position: center;
+//     padding: 150px 0;
+//   }
   
   .banner h1 {
     margin: 100px;
@@ -15,7 +15,7 @@
   
   .banner p {
     font-size: 20px;
-    color: white;
+    background-color: white;
     opacity: .7;
     text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   }
@@ -24,12 +24,28 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    height: 10px;
+    height: 180px;
     flex-wrap: nowrap;
     flex-direction: column;
+    margin: 15px 0px;
   }
 
-  .container-main {
+  .h2 {
+    color: white;
+  }
 
-    justify-content: space-around;
+  .banner {
+    align-self: stretch;
+    color: white;
+
+  }
+
+  .btn {
+    font-size: 30px;
+    --bs-btn-color: white;
+  }
+
+  .container {
+    color: white;
+    background-color: #131515;
   }
