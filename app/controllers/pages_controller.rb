@@ -4,6 +4,9 @@ class PagesController < ApplicationController
   def home
   end
 
+  def verify
+  end
+
   def suggestion
   end
 
