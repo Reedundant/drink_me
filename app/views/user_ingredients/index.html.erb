@@ -11,14 +11,14 @@
                 <% if ui.selected == false %>
                   <div class="card">
                     <div class="img-container">
-                      <%= image_tag "#{ui.ingredient.url_path}" %>
+                      <%= image_tag "#{ui.ingredient.src_path}" %>
                     </div>
                     <p><%= ui.ingredient.name.capitalize %></p>
                   </div>
                 <% else %>
                   <div class="card selected">
                     <div class="img-container">
-                      <%= image_tag "#{ui.ingredient.url_path}" %>
+                      <%= image_tag "#{ui.ingredient.src_path}" %>
                     </div>
                     <p><%= ui.ingredient.name.capitalize %></p>
                   </div>
