@@ -10,61 +10,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_11_28_140027) do
+ActiveRecord::Schema[7.0].define(version: 2022_11_28_165124) do
+
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
-
-  create_table "custom_recipe_user_ingredients", force: :cascade do |t|
-    t.bigint "user_ingredient_id", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["user_ingredient_id"], name: "index_custom_recipe_user_ingredients_on_user_ingredient_id"
-  end
-
-  create_table "custom_recipes", force: :cascade do |t|
-    t.bigint "recipe_id", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["recipe_id"], name: "index_custom_recipes_on_recipe_id"
-  end
 
   create_table "ingredients", force: :cascade do |t|
     t.string "name"
     t.string "category"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "src_path"
-  end
-
-  create_table "recipe_types", force: :cascade do |t|
-    t.string "name"
-    t.integer "liquor_ratio"
-    t.integer "liquer_ratio"
-    t.integer "juice_ratio"
-    t.integer "syrup_ratio"
-    t.string "difficulty"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.integer "liquor2_ratio"
-    t.integer "liquer2_ratio"
-    t.integer "juice2_ratio"
-    t.integer "syrup2_ratio"
-    t.integer "other_ratio"
   end
 
   create_table "recipes", force: :cascade do |t|
     t.string "name"
-    t.bigint "recipe_type_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["recipe_type_id"], name: "index_recipes_on_recipe_type_id"
-  end
-
-  create_table "tools", force: :cascade do |t|
-    t.string "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string "units"
+    t.bigint "user_id"
+    t.string "img_url"
+    t.index ["user_id"], name: "index_recipes_on_user_id"
   end
 
   create_table "user_ingredients", force: :cascade do |t|
@@ -75,15 +39,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_28_140027) do
     t.boolean "selected", default: false
     t.index ["ingredient_id"], name: "index_user_ingredients_on_ingredient_id"
     t.index ["user_id"], name: "index_user_ingredients_on_user_id"
-  end
-
-  create_table "user_tools", force: :cascade do |t|
-    t.bigint "user_id", null: false
-    t.bigint "tool_id", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["tool_id"], name: "index_user_tools_on_tool_id"
-    t.index ["user_id"], name: "index_user_tools_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -100,11 +55,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_28_140027) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "custom_recipe_user_ingredients", "user_ingredients"
-  add_foreign_key "custom_recipes", "recipes"
-  add_foreign_key "recipes", "recipe_types"
+  add_foreign_key "recipes", "users"
   add_foreign_key "user_ingredients", "ingredients"
   add_foreign_key "user_ingredients", "users"
-  add_foreign_key "user_tools", "tools"
-  add_foreign_key "user_tools", "users"
 end
