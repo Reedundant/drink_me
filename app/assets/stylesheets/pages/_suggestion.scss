@@ -3,7 +3,12 @@
 //     background-position: center;
 //     padding: 150px 0;
 //   }
-  
+  body {
+
+    background-color: #131515;
+  }
+
+
   .banner h1 {
     margin: 100px;
     margin-bottom: 100px;
@@ -12,7 +17,7 @@
     font-size: 32px;
     font-weight: bold;
   }
-  
+
   .banner p {
     font-size: 20px;
     background-color: white;
