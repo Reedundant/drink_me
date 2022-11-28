@@ -19,41 +19,47 @@ puts "> Generating ingredients..."
 puts ""
 
 # Liquors
-# rum, gin, scotch, cognac, whisky, vodka, vadka, tequila
-Ingredient.create(name: 'white rum', category: 'liquor')
-Ingredient.create(name: 'gin', category: 'liquor')
-Ingredient.create(name: 'scotch', category: 'liquor')
-Ingredient.create(name: 'cognac', category: 'liquor')
-Ingredient.create(name: 'bourbon', category: 'liquor')
-Ingredient.create(name: 'vodka', category: 'liquor')
-Ingredient.create(name: 'blanco tequila', category: 'liquor')
-Ingredient.create(name: 'reposado tequila', category: 'liquor')
-Ingredient.create(name: 'anejo tequila', category: 'liquor')
-Ingredient.create(name: 'brandy', category: 'liquor')
-Ingredient.create(name: 'dark rum', category: 'liquor')
-Ingredient.create(name: 'spiced rum', category: 'liquor')
-Ingredient.create(name: 'rye', category: 'liquor')
-Ingredient.create(name: 'irish whiskey', category: 'liquor')
+Ingredient.create(name: 'white rum', category: 'liquor', src_path: 'ingredient_icons-svgs/svg-liquors/rum.svg')
+Ingredient.create(name: 'gin', category: 'liquor', src_path: 'ingredient_icons-svgs/svg-liquors/gin.svg')
+Ingredient.create(name: 'scotch', category: 'liquor', src_path: 'ingredient_icons-svgs/svg-liquors/brandy.svg')
+Ingredient.create(name: 'cognac', category: 'liquor', src_path: 'ingredient_icons-svgs/svg-liquors/cognac.svg')
+Ingredient.create(name: 'bourbon', category: 'liquor', src_path: 'ingredient_icons-svgs/svg-liquors/vodka.svg')
+Ingredient.create(name: 'vodka', category: 'liquor', src_path: 'ingredient_icons-svgs/svg-liquors/bourbon.svg')
+Ingredient.create(name: 'blanco tequila', category: 'liquor', src_path: 'ingredient_icons-svgs/svg-liquors/tequila.svg')
+Ingredient.create(name: 'reposado tequila', category: 'liquor', src_path: 'ingredient_icons-svgs/svg-liquors/jagermeister.svg')
+Ingredient.create(name: 'anejo tequila', category: 'liquor', src_path: 'ingredient_icons-svgs/svg-liquors/fireball.svg')
 
 #Liqueurs
-# coffee liqueur, amaro, herbal liqueur, sweet vermouth, dry vermouth, aperitif, cointreau
-Ingredient.create(name: 'coffee liqueur', category: 'liqueur')
-Ingredient.create(name: 'amaro', category: 'liqueur')
-Ingredient.create(name: 'herbal liqueur', category: 'liqueur')
-Ingredient.create(name: 'sweet vermouth', category: 'liqueur')
-Ingredient.create(name: 'dry vermouth', category: 'liqueur')
-Ingredient.create(name: 'aperitif', category: 'liqueur')
-Ingredient.create(name: 'cointreau', category: 'liqueur')
+Ingredient.create(name: 'triple sec', category: 'liqueur', src_path: 'ingredient_icons-svgs/svg-liqueurs/triple-sec.svg')
+Ingredient.create(name: 'herbal liqueur', category: 'liqueur', src_path: 'ingredient_icons-svgs/svg-liqueurs/herbal-liqueur.svg')
+Ingredient.create(name: 'amaro', category: 'liqueur', src_path: 'ingredient_icons-svgs/svg-liqueurs/amaro.svg')
+Ingredient.create(name: 'dry vermouth', category: 'liqueur', src_path: 'ingredient_icons-svgs/svg-liqueurs/dry-vermouth.svg')
+Ingredient.create(name: 'cointreau', category: 'liqueur', src_path: 'ingredient_icons-svgs/svg-liqueurs/cointreau.svg')
+Ingredient.create(name: 'campari', category: 'liqueur', src_path: 'ingredient_icons-svgs/svg-liqueurs/campari.svg')
+Ingredient.create(name: 'frangelico', category: 'liqueur', src_path: 'ingredient_icons-svgs/svg-liqueurs/frangelico.svg')
+Ingredient.create(name: 'coffee liqueur', category: 'liqueur', src_path: 'ingredient_icons-svgs/svg-liqueurs/coffee-liqueur.svg')
+Ingredient.create(name: 'sake', category: 'liqueur', src_path: 'ingredient_icons-svgs/svg-liqueurs/sake.svg')
 
 # Syrups
-Ingredient.create(name: 'honey', category: 'syrup')
-Ingredient.create(name: 'maple syrup', category: 'syrup')
+Ingredient.create(name: 'brown sugar', category: 'syrup', src_path: 'ingredient_icons-svgs/svg-syrups/brown-sugar.svg')
+Ingredient.create(name: 'maple', category: 'syrup', src_path: 'ingredient_icons-svgs/svg-syrups/maple.svg')
+Ingredient.create(name: 'honey', category: 'syrup', src_path: 'ingredient_icons-svgs/svg-syrups/honey.svg')
+Ingredient.create(name: 'flavoured syrup', category: 'syrup', src_path: 'ingredient_icons-svgs/svg-syrups/flavoured-syrup.svg')
+Ingredient.create(name: 'white sugar', category: 'syrup', src_path: 'ingredient_icons-svgs/svg-syrups/white-sugar.svg')
+Ingredient.create(name: 'fruit preserve', category: 'syrup', src_path: 'ingredient_icons-svgs/svg-syrups/fruit-preserve.svg')
+Ingredient.create(name: 'ginger', category: 'syrup', src_path: 'ingredient_icons-svgs/svg-syrups/ginger.svg')
+Ingredient.create(name: 'cinnamon', category: 'syrup', src_path: 'ingredient_icons-svgs/svg-syrups/cinnamon.svg')
 
 # Juices
-Ingredient.create(name: 'lemon juice', category: 'juice')
-Ingredient.create(name: 'lime juice', category: 'juice')
-Ingredient.create(name: 'pineapple juice', category: 'juice')
-Ingredient.create(name: 'apple juice', category: 'juice')
+Ingredient.create(name: 'lime', category: 'juice', src_path: 'ingredient_icons-svgs/svg-juices/lime.svg')
+Ingredient.create(name: 'lemon', category: 'juice', src_path: 'ingredient_icons-svgs/svg-juices/lemon.svg')
+Ingredient.create(name: 'grapefruit', category: 'juice', src_path: 'ingredient_icons-svgs/svg-juices/grapefruit.svg')
+Ingredient.create(name: 'orange', category: 'juice', src_path: 'ingredient_icons-svgs/svg-juices/orange.svg')
+Ingredient.create(name: 'apple', category: 'juice', src_path: 'ingredient_icons-svgs/svg-juices/apple.svg')
+Ingredient.create(name: 'cranberry', category: 'juice', src_path: 'ingredient_icons-svgs/svg-juices/cranberry.svg')
+Ingredient.create(name: 'pineapple', category: 'juice', src_path: 'ingredient_icons-svgs/svg-juices/pineapple.svg')
+Ingredient.create(name: 'mango', category: 'juice', src_path: 'ingredient_icons-svgs/svg-juices/mango.svg')
+Ingredient.create(name: 'grape', category: 'juice', src_path: 'ingredient_icons-svgs/svg-juices/grape.svg')
 
 # Tools
 Tool.create(name: 'jigger', units: 'oz')
@@ -69,6 +75,12 @@ Tool.create(name: 'muddler', units: '')
 
 
 pp Ingredient.all
+
+# Pass ingredients in user Jack Torrance's ingredients
+ingredients = Ingredient.all
+ingredients.each do |i|
+  UserIngredient.create(ingredient: i, user: User.first)
+end
 
 # Recipe types
 RecipeType.create(

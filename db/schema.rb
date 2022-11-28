@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_11_25_165652) do
+ActiveRecord::Schema[7.0].define(version: 2022_11_28_140027) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -33,14 +33,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_25_165652) do
     t.string "category"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-  end
-
-  create_table "recipe_ingredient_categories", force: :cascade do |t|
-    t.bigint "recipe_id", null: false
-    t.string "ingredient_category"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["recipe_id"], name: "index_recipe_ingredient_categories_on_recipe_id"
+    t.string "src_path"
   end
 
   create_table "recipe_types", force: :cascade do |t|
@@ -79,7 +72,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_25_165652) do
     t.bigint "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "status", default: 0
+    t.boolean "selected", default: false
     t.index ["ingredient_id"], name: "index_user_ingredients_on_ingredient_id"
     t.index ["user_id"], name: "index_user_ingredients_on_user_id"
   end
@@ -109,7 +102,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_25_165652) do
 
   add_foreign_key "custom_recipe_user_ingredients", "user_ingredients"
   add_foreign_key "custom_recipes", "recipes"
-  add_foreign_key "recipe_ingredient_categories", "recipes"
   add_foreign_key "recipes", "recipe_types"
   add_foreign_key "user_ingredients", "ingredients"
   add_foreign_key "user_ingredients", "users"
