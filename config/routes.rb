@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
   root to: "pages#home"
-  get '/verify', to: 'pages#verify'
+  get '/verify', to: 'pages#verify', as: :verify
 
   resources :user_ingredients, only: :index
   get '/user_ingredients/:id/toggle_selected', to: 'user_ingredients#toggle_selected', as: :toggle_selected
