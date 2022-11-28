@@ -1,7 +1,0 @@
-<%= simple_form_for(:user_ingredient) do |f| %>
-  <%= f.input :ingredient_id, :label => "Liquor", :collection => @liquors, input_html: { multiple: true }, selected: @user_liquors %>
-  <%= f.input :ingredient_id, :label => "Liqueur", :collection => @liqueurs, input_html: { multiple: true } %>
-  <%= f.input :ingredient_id, :label => "Syrup", :collection => @syrups, input_html: { multiple: true } %>
-  <%= f.input :ingredient_id, :label => "Juice", :collection => @juices, input_html: { multiple: true } %>
-  <%= f.submit 'Go'%>
-<% end %>
