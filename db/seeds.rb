@@ -23,7 +23,14 @@ puts ""
 # Call method from api_call_ingredients
 api_call_ingredients
 
-# pp Ingredient.count
+# Pass ingredients in user Jack Torrance's ingredients
+ingredients = Ingredient.all
+ingredients.each do |i|
+  UserIngredient.create(ingredient: i, user: User.first)
+end
+
+pp UserIngredient.all
+
 puts ""
 puts "> Done generating ingredients! 🥃"
 
