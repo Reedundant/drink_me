@@ -1,5 +1,6 @@
 # https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list
 require 'json'
+require 'open-uri'
 
 def api_call_ingredients
   ingredients_url = 'https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list'
