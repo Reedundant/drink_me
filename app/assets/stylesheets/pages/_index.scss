@@ -1,5 +1,6 @@
 // Import page-specific CSS files here.
 @import "home";
+@import "verification";  // For the verification page
 
 .btn-gradient {
     display: flex;
@@ -13,7 +14,7 @@
     transition: background 0.3s ease;
     border: 1px solid #0F60C4;
   }
-  
+
   .btn-gradient:hover {
     background: linear-gradient(#147EFF, #0F67DA);
     color: white;

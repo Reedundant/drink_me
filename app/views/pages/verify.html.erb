@@ -1,0 +1,14 @@
+<div class="verification">
+  <h1>Drink.Me only serves adults</h1>
+
+  <div class="verification__imgContainer">
+    <%= image_tag "pages_icons-svgs/verify-icon.svg", class: "" %>
+  </div>
+
+  <p>Please confirm your age before proceeding.</p>
+
+  <div class="verification__btns btns">
+    <%= link_to "I am NOT 18+", root_path,  class: "btns__btn" %>
+    <%= link_to "I am 18+", user_ingredients_path, class: "btns__btn" %>
+  </div>
+</div>
