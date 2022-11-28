@@ -1,129 +1,27 @@
 <div class="ingredients">
-  <h1>User Ingredients</h1>
+  <h1>Select all the ingredients you have!</h1>
 
-  <%# LIQUORS %>
   <section class="ingredients__section section">
-    <h2>Liquors</h2>
-    <ul class="section__list list-unstyled">
-      <% @user_ingredients.each do |ui| %>
-          <% if ui.ingredient.category == 'liquor' %>
-            <li>
-              <%= link_to toggle_selected_path(ui) do %>
-                <% if ui.selected == false %>
-                  <div class="card">
-                    <div class="img-container">
-                      <%= image_tag "#{ui.ingredient.src_path}" %>
-                    </div>
-                    <p><%= ui.ingredient.name.capitalize %></p>
-                  </div>
-                <% else %>
-                  <div class="card selected">
-                    <div class="img-container">
-                      <%= image_tag "#{ui.ingredient.src_path}" %>
-                    </div>
-                    <p><%= ui.ingredient.name.capitalize %></p>
-                  </div>
-                <% end %>
-              <% end %>
-            </li>
+    <ul class="list-unstyled section__list">
+      <% @user_ingredients.each do |user_ingredient| %>
+        <li>
+          <%= link_to toggle_selected_path(user_ingredient) do %>
+            <% if user_ingredient.selected == false %>
+              <div class="card">
+                <p>
+                  <%= user_ingredient.ingredient.name %>
+                </p>
+              </div>
+            <% else %>
+              <div class="card selected">
+                <p>
+                  <%= user_ingredient.ingredient.name %>
+                </p>
+              </div>
+            <% end %>
           <% end %>
+        </li>
       <% end %>
     </ul>
   </section>
-
-  <%# LIQUEURS %>
-  <section class="ingredients__section section">
-    <h2>Liqueurs</h2>
-    <ul class="section__list list-unstyled">
-      <% @user_ingredients.each do |ui| %>
-          <% if ui.ingredient.category == 'liqueur' %>
-            <li>
-              <%= link_to toggle_selected_path(ui) do %>
-                <% if ui.selected == false %>
-                  <div class="card">
-                    <div class="img-container">
-                      <%= image_tag "#{ui.ingredient.src_path}" %>
-                    </div>
-                    <p><%= ui.ingredient.name.capitalize %></p>
-                  </div>
-                <% else %>
-                  <div class="card selected">
-                    <div class="img-container">
-                      <%= image_tag "#{ui.ingredient.src_path}" %>
-                    </div>
-                    <p><%= ui.ingredient.name.capitalize %></p>
-                  </div>
-                <% end %>
-              <% end %>
-            </li>
-          <% end %>
-      <% end %>
-    </ul>
-  </section>
-
-  <%# SYRUPS %>
-  <section class="ingredients__section section">
-    <h2>Syrups</h2>
-    <ul class="section__list list-unstyled">
-      <% @user_ingredients.each do |ui| %>
-          <% if ui.ingredient.category == 'syrup' %>
-            <li>
-              <%= link_to toggle_selected_path(ui) do %>
-                <% if ui.selected == false %>
-                  <div class="card">
-                    <div class="img-container">
-                      <%= image_tag "#{ui.ingredient.src_path}" %>
-                    </div>
-                    <p><%= ui.ingredient.name.capitalize %></p>
-                  </div>
-                <% else %>
-                  <div class="card selected">
-                    <div class="img-container">
-                      <%= image_tag "#{ui.ingredient.src_path}" %>
-                    </div>
-                    <p><%= ui.ingredient.name.capitalize %></p>
-                  </div>
-                <% end %>
-              <% end %>
-            </li>
-          <% end %>
-      <% end %>
-    </ul>
-  </section>
-
-  <%# JUICES %>
-  <section class="ingredients__section section">
-    <h2>Syrups</h2>
-    <ul class="section__list list-unstyled">
-      <% @user_ingredients.each do |ui| %>
-          <% if ui.ingredient.category == 'juice' %>
-            <li>
-              <%= link_to toggle_selected_path(ui) do %>
-                <% if ui.selected == false %>
-                  <div class="card">
-                    <div class="img-container">
-                      <%= image_tag "#{ui.ingredient.src_path}" %>
-                    </div>
-                    <p><%= ui.ingredient.name.capitalize %></p>
-                  </div>
-                <% else %>
-                  <div class="card selected">
-                    <div class="img-container">
-                      <%= image_tag "#{ui.ingredient.src_path}" %>
-                    </div>
-                    <p><%= ui.ingredient.name.capitalize %></p>
-                  </div>
-                <% end %>
-              <% end %>
-            </li>
-          <% end %>
-      <% end %>
-    </ul>
-  </section>
-  <div class="ingred-button">
-    <%= link_to "Next", suggestion_path, class: "btn btn-primary col-12" %>
-  </div>
 </div>
-
-<%# image_tag "ing_icons-pngs/png-liquors/gin.png" %>
-<%# image_tag "ingredient_icons-svgs/svg-liquors/rum.svg" %>
