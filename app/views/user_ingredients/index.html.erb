@@ -61,6 +61,36 @@
     </ul>
   </section>
 
+    <%# SYRUPS %>
+  <section class="ingredients__section section">
+    <h2>Syrups</h2>
+    <ul class="section__list list-unstyled">
+      <% @user_ingredients.each do |ui| %>
+          <% if ui.ingredient.category == 'syrup' %>
+            <li>
+              <%= link_to toggle_selected_path(ui) do %>
+                <% if ui.selected == false %>
+                  <div class="card">
+                    <div class="img-container">
+                      <%= image_tag "#{ui.ingredient.src_path}" %>
+                    </div>
+                    <p><%= ui.ingredient.name.capitalize %></p>
+                  </div>
+                <% else %>
+                  <div class="card selected">
+                    <div class="img-container">
+                      <%= image_tag "#{ui.ingredient.src_path}" %>
+                    </div>
+                    <p><%= ui.ingredient.name.capitalize %></p>
+                  </div>
+                <% end %>
+              <% end %>
+            </li>
+          <% end %>
+      <% end %>
+    </ul>
+  </section>
+
   <%= link_to "Next", root_path, class: "next-link" %>
 
   <p>ELLO!</p>
