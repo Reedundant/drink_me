@@ -13,9 +13,9 @@ puts ""
 
 User.create!(email: 'jacktorrance@gmail.com', username: 'jacktorrance', age: 57, password: 'drinkme123')
 User.create!(email: 'jacknicholson@gmail.com', username: 'jacknietzscheson', age: 85, password: 'drinkme123')
-# pp User.all
-puts "> Done generating users! 👤"
+pp User.all
 puts ""
+puts "> Done generating users! 👤"
 
 puts "> Generating ingredients..."
 puts ""

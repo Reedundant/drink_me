@@ -10,11 +10,13 @@ def api_call_ingredients
   ingredients_url_serialized = URI.open(ingredients_url).read
   ingredients_data = JSON.parse(ingredients_url_serialized)['drinks']
 
-  # pp ingredients_data
+  pp ingredients_data
 
   ingredients_data.each do |ingredient_data|
     ingredient_string = ingredient_data['strIngredient1']
 
-    puts "#{ingredient_string}"
+    Ingredient.create!(name: ingredient_string)
   end
+
+  pp Ingredient.all
 end
