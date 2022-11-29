@@ -24,7 +24,9 @@ class RecipesController < ApplicationController
     @filter_data = JSON.parse(@filter_url_serialized)["drinks"]
 
     # @filter_data[0]["strDrink"]
-    # raise
+    # @filter_data.each do |recipe|
+    #   Recipe.create(name: recipe["strDrink"])
+    # end
   end
 
   def show

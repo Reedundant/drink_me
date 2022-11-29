@@ -1,6 +1,6 @@
 <h1>Suggested recipes</h1>
 
-<ul>
+<ul class="list-unstyled">
   <% @filter_data.each do |recipe| %>
     <li><%= link_to recipe["strDrink"], recipe_path(recipe["idDrink"]) %></li>
   <% end %>
