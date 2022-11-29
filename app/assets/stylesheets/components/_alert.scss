@@ -23,5 +23,6 @@
   animation-name: fadeout;
   animation-duration: 1.5s;
   animation-delay: 2s;
+  animation-fill-mode: forwards; // important!
   // animation-iteration-count: 1;
 }
