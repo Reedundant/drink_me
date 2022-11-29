@@ -1,0 +1,45 @@
+.recipe {
+  border: 1px solid red;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 1rem;
+  background-color: $bg-black;
+  color: $white;
+
+  h1, h2 {
+    font-weight: 300;
+  }
+
+  &__imgContainer {
+    width: 100%;
+    height: auto;
+
+    img {
+      width: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &__ingredients {
+    // border: 1px solid blue;
+
+    .ingredients-container {
+      display: flex;
+      gap: 2rem;
+
+      .ingredient-list {
+        // border: 2px dashed magenta;
+      }
+
+      .measurement-list {
+        // border: 2px dashed magenta;
+      }
+    }
+  }
+
+  &__instructions {
+    //
+  }
+}

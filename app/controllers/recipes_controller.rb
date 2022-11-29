@@ -16,10 +16,7 @@ class RecipesController < ApplicationController
   def show
     @id = params[:id]
     fetch_single_recipe(@id)
-    raise
-
-    # @filter_url_serialized = URI.open(@filter_url).read
-    # @filter_data = JSON.parse(@filter_url_serialized)["drinks"]
+    # raise
   end
 
   private
@@ -37,7 +34,10 @@ class RecipesController < ApplicationController
     @api_key = ENV.fetch("COCKTAILDB_API_KEY")
     @single_recipe_url = "https://www.thecocktaildb.com/api/json/v2/#{@api_key}/lookup.php?i=#{id}"
     @single_recipe_url_serialized = URI.open(@single_recipe_url).read
-    @single_recipe_data = JSON.parse(@single_recipe_url_serialized)["drinks"]
+    @single_recipe_data = JSON.parse(@single_recipe_url_serialized)["drinks"][0]
+
+    @ingredients = @single_recipe_data.select { |k, v| k =~ /strIngredient\d+/ }.compact
+    @measurements = @single_recipe_data.select { |k, v| k =~ /strMeasure\d+/ }.compact
   end
 end
 
