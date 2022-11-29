@@ -15,7 +15,12 @@ export default class extends Controller {
     event.preventDefault()
     this.cardTarget.classList.toggle('selected')
     const url = `${window.location.href}/${this.cardTarget.id}/toggle_selected`
-    console.log(url)
+    // console.log(document.querySelectorAll('.selected').length)
     fetch(url)
+    if (document.querySelectorAll('.selected').length > 5){
+      // console.log(document.querySelectorAll('.card'));
+      // console.log(document.querySelectorAll('.selected')[5]);
+      document.querySelectorAll('.selected')[5].classList.remove('selected')
+    }
   }
 }
