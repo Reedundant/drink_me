@@ -8,7 +8,7 @@
   <p>Please confirm your age before proceeding.</p>
 
   <div class="verification__btns btns">
-    <%= link_to "I am NOT 18+", root_path,  class: "btns__btn" %>
+    <%= link_to "I am NOT 18+", root_path,  class: "btns__btn", data: { turbo_method: "get", turbo_confirm: "Halt! Drink Me only serves adults. You must be 18 or older to signup."} %>
     <%= link_to "I am 18+", user_ingredients_path, class: "btns__btn" %>
   </div>
 </div>
