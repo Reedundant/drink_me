@@ -6,3 +6,6 @@ import { application } from "./application"
 
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)
+
+import PreventReloadOnSelectController from "./prevent_reload_on_select_controller"
+application.register("prevent-reload-on-select", PreventReloadOnSelectController)
