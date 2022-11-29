@@ -1,1 +1,7 @@
 <h1>Suggested recipes</h1>
+
+<ul>
+  <% @filter_data.each do |recipe| %>
+    <li><%= recipe["strDrink"] %></li>
+  <% end %>
+</ul>
