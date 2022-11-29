@@ -5,7 +5,7 @@ class UserIngredientsController < ApplicationController
     @user = current_user
     @ingredients = Ingredient.all
     ## Add .order to help organize ingredients
-    @user_ingredients = UserIngredient.all
+    @user_ingredients = UserIngredient.includes(:ingredient).order('ingredients.name asc')
   end
 
   def toggle_selected
