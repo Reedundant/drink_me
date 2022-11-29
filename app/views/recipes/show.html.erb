@@ -1,17 +1,32 @@
-<h1><%= @single_recipe_data["strDrink"] %></h1>
+<div class="recipe">
+  <h1><%= @single_recipe_data["strDrink"] %></h1>
 
-<%= image_tag @single_recipe_data["strDrinkThumb"] %>
+  <div class="recipe__imgContainer">
+    <%= image_tag @single_recipe_data["strDrinkThumb"] %>
+  </div>
 
-<h2>Ingredients</h2>
-<ul>
-  <% @ingredients.each do |_k, ingredient| %>
-    <li><%= ingredient %></li>
-  <% end %>
-</ul>
+  <section class="recipe__ingredients">
+    <h2>Ingredients</h2>
+    <div class="ingredients-container">
+      <ul class="measurement-list list-unstyled">
+        <% @measurements.each do |_k, measurement| %>
+          <li><%= measurement %></li>
+        <% end %>
+      </ul>
+      <ul class="ingredient-list list-unstyled">
+        <% @ingredients.each do |_k, ingredient| %>
+          <li><%= ingredient %></li>
+        <% end %>
+      </ul>
+    </div>
+  </section>
 
-<h2>Instructions</h2>
-<p><%= @single_recipe_data["strInstructions"] %></p>
+  <section class="recipe__instructions">
+    <h2>Instructions</h2>
+    <p><%= @single_recipe_data["strInstructions"] %></p>
+  </section>
 
-<%= link_to "Back to recipes", recipes_path %>
+  <%= link_to "Back to recipes", recipes_path %>
+</div>
 
 <%# underscore signifies we're not using the key. just the value, this is a convention. =~ REGEX%>

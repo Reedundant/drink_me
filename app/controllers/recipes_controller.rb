@@ -37,6 +37,7 @@ class RecipesController < ApplicationController
     @single_recipe_data = JSON.parse(@single_recipe_url_serialized)["drinks"][0]
 
     @ingredients = @single_recipe_data.select { |k, v| k =~ /strIngredient\d+/ }.compact
+    @measurements = @single_recipe_data.select { |k, v| k =~ /strMeasure\d+/ }.compact
   end
 end
 
