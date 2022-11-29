@@ -1,4 +1,5 @@
 require_relative 'api_call_ingredients'
+require_relative 'api_call_recipes'
 
 puts "> Destroying all instances..."
 Recipe.destroy_all
@@ -12,7 +13,7 @@ puts "> Generating users..."
 puts ""
 
 User.create!(email: 'jacktorrance@gmail.com', username: 'jacktorrance', age: 57, password: 'drinkme123')
-User.create!(email: 'jacknicholson@gmail.com', username: 'jacknietzscheson', age: 85, password: 'drinkme123')
+# User.create!(email: 'jacknicholson@gmail.com', username: 'jacknietzscheson', age: 85, password: 'drinkme123')
 pp User.all
 puts ""
 puts "> Done generating users! 👤"
@@ -30,6 +31,8 @@ ingredients.each do |i|
 end
 
 pp UserIngredient.all
+
+# api_call_recipes
 
 puts ""
 puts "> Done generating ingredients & user ingredients! 🥃"
