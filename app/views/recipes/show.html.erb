@@ -1,2 +1,17 @@
-<h1></h1>
+<h1><%= @single_recipe_data["strDrink"] %></h1>
+
+<%= image_tag @single_recipe_data["strDrinkThumb"] %>
+
+<h2>Ingredients</h2>
+<ul>
+  <% @ingredients.each do |_k, ingredient| %>
+    <li><%= ingredient %></li>
+  <% end %>
+</ul>
+
+<h2>Instructions</h2>
+<p><%= @single_recipe_data["strInstructions"] %></p>
+
 <%= link_to "Back to recipes", recipes_path %>
+
+<%# underscore signifies we're not using the key. just the value, this is a convention. %>
