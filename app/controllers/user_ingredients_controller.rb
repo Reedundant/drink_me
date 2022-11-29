@@ -4,6 +4,7 @@ class UserIngredientsController < ApplicationController
   def index
     @user = current_user
     @ingredients = Ingredient.all
+    ## Add .order to help organize ingredients
     @user_ingredients = UserIngredient.all
   end
 
@@ -17,7 +18,8 @@ class UserIngredientsController < ApplicationController
       @user_ingredient.update(selected: true)
     end
 
-    redirect_to user_ingredients_path
+    head :ok
+    # redirect_to user_ingredients_path
     # raise
   end
 end

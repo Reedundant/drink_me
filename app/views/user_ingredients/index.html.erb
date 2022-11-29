@@ -1,23 +1,21 @@
 <div class='ingredients'>
-<h1>Select all the ingredients you have!</h1>
+  <h1>Select all the ingredients you have!</h1>
   <section class="ingredients__section section">
     <ul class="list-unstyled section__list">
       <% @user_ingredients.each do |user_ingredient| %>
-        <li>
+        <li data-controller='prevent-reload-on-select'
+            data-prevent-reload-on-select-target='button'
+            data-action='click->prevent-reload-on-select#prevent'>
           <%= link_to toggle_selected_path(user_ingredient) do %>
-            <% if user_ingredient.selected == false %>
-              <div class="card">
-                <p>
-                  <%= user_ingredient.ingredient.name %>
-                </p>
-              </div>
-            <% else %>
-              <div class="card selected">
-                <p>
-                  <%= user_ingredient.ingredient.name %>
-                </p>
-              </div>
-            <% end %>
+
+            <div class="card  <%= 'selected' if user_ingredient.selected  %>"
+                 data-prevent-reload-on-select-target='card'
+                 id='<%= user_ingredient.id %>'>
+              <p>
+                <%= user_ingredient.ingredient.name %>
+              </p>
+            </div>
+
           <% end %>
         </li>
       <% end %>
