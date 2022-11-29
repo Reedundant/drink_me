@@ -9,3 +9,6 @@ application.register("hello", HelloController)
 
 import PreventReloadOnSelectController from "./prevent_reload_on_select_controller"
 application.register("prevent-reload-on-select", PreventReloadOnSelectController)
+
+import FadeOutController from "./fade_out_controller"
+application.register("fade-out", FadeOutController)
