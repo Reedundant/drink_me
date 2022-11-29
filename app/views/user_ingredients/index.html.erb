@@ -7,7 +7,7 @@
     <ul class="section__list list-unstyled">
       <% @user_ingredients.each do |ui| %>
           <% if ui.ingredient.category == 'liquor' %>
-            <li>
+            <li data-controller='prevent-reload-on-select'>
               <%= link_to toggle_selected_path(ui) do %>
                 <% if ui.selected == false %>
                   <div class="card">
