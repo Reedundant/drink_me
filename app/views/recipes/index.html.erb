@@ -2,6 +2,8 @@
 
 <ul>
   <% @filter_data.each do |recipe| %>
-    <li><%= recipe["strDrink"] %></li>
+    <li><%= link_to recipe["strDrink"], recipe_path(recipe["idDrink"]) %></li>
   <% end %>
 </ul>
+
+<%= link_to "Back to Ingredients", user_ingredients_path %>

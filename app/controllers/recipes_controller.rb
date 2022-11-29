@@ -26,4 +26,14 @@ class RecipesController < ApplicationController
     # @filter_data[0]["strDrink"]
     # raise
   end
+
+  def show
+    raise
+    # @recipe =
+    # @api_key = ENV.fetch("COCKTAILDB_API_KEY")
+    # @filter_url = "https://www.thecocktaildb.com/api/json/v2/#{@api_key}/lookup.php?i=#{params[:id]}"
+
+    # @filter_url_serialized = URI.open(@filter_url).read
+    # @filter_data = JSON.parse(@filter_url_serialized)["drinks"]
+  end
 end
