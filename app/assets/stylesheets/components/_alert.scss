@@ -4,3 +4,22 @@
   right: 16px;
   z-index: 1000;
 }
+
+@keyframes fadeout {
+  0% {
+    opacity: 1;
+    display: block;
+  }
+
+  100% {
+    opacity: 0;
+    display: none;
+  }
+}
+
+.fade-out-animation {
+  animation-name: fadeout;
+  animation-duration: 1.5s;
+  animation-delay: 2s;
+  animation-fill-mode: forwards; // important!
+}
