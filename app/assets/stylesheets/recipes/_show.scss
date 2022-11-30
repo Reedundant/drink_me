@@ -26,7 +26,7 @@ $card-gray: #1B1B1B;
   text-align: center;
 
   h1 {
-    font-size: 2rem; // 26px
+    font-size: 2.8rem; // 26px
     font-weight: 300;
     margin-bottom: 0;
   }
@@ -34,7 +34,7 @@ $card-gray: #1B1B1B;
   h2 {
     font-weight: 300;
     margin-bottom: 1rem;
-    font-size: 1.5rem;
+    font-size: 2.3rem;
   }
 
   &__imgContainer {
@@ -48,25 +48,10 @@ $card-gray: #1B1B1B;
     }
   }
 
-  // &__card-category {
-  //   background-size: cover;
-  //   background-position: center;
-  //   height: 107px;
-  //   display: flex;
-  //   justify-content: center;
-  //   align-items: center;
-  //   color: white;
-
-  //   h1 {
-  //     font-size: 2rem; // 26px
-  //     font-weight: 400;
-  //     margin-bottom: 0;
-  //   }
-  // }
-
   &__ingredients {
     border-bottom: 0.1px solid rgba(211, 211, 211, 0.257);
     padding-bottom: 1.2rem;
+    font-size: 1.2rem;
 
     .ingredients-container {
       display: flex;
@@ -86,7 +71,7 @@ $card-gray: #1B1B1B;
   }
 
   &__instructions {
-    //
+    font-size: 1.2rem;
   }
 
   &__btn {
