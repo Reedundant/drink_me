@@ -1,4 +1,4 @@
-<div container>
+<div class="form">
   <h2>Sign up</h2>
 
   <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), data: { turbo: :false }) do |f| %>
@@ -9,7 +9,7 @@
                   required: true,
                   autofocus: true,
                   input_html: { autocomplete: "email" }%>
-      <%= f.input :username,
+      <%# f.input :username,
                   required: true,
                   autofocus: true,
                   input_html: { autocomplete: "username" }%>
@@ -27,9 +27,10 @@
     </div>
 
     <div class="form-actions">
-      <%= f.button :submit, "Sign up" %>
+      <%= f.button :submit, "Sign up", class: "form-actions__btn" %>
     </div>
   <% end %>
 
   <%= render "devise/shared/links" %>
+
 </div>

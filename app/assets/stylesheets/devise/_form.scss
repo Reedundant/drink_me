@@ -1,3 +1,54 @@
+// CONTAINER
 .form {
+  border: 1px solid red;
+
+  height: 100vh;
   background-color: $bg-black;
+  padding: 90px 1rem 1rem 1rem;
+  color: #FFF;
+
+  h2 {
+    font-weight: 300;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  a {
+    color: goldenrod;
+    text-decoration: none;
+  }
+
+  // FORM
+  .simple_form {
+    // border: 1px solid blue;
+    width: 100%;
+
+    .form-inputs {
+      //
+      .form-control {
+        background-color: $bg-black;
+        color: #FFF;
+        border: 1px solid rgba(211, 211, 211, 0.26);
+
+        &:focus {
+          background-color: $bg-black;
+          // border: 1px so
+        }
+      }
+    }
+
+    .form-actions {
+        //
+      &__btn {
+        // border: 1px solid red;
+        position: absolute;
+        bottom: 1rem;
+      }
+    }
+
+    .form-check-input {
+      background-color: $bg-black;
+      border: 1px solid rgba(211, 211, 211, 0.26);
+    }
+  }
 }
