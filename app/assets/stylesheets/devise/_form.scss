@@ -10,11 +10,33 @@
   h2 {
     font-weight: 300;
     font-size: 2rem;
+    margin-bottom: 1rem;
   }
 
   // FORM
   .simple_form {
-    border: 1px solid blue;
+    // border: 1px solid blue;
     width: 100%;
+
+    .form-inputs {
+      //
+      .form-control {
+        background-color: $bg-black;
+        color: #FFF;
+        border: 1px solid rgba(211, 211, 211, 0.26);
+
+        &:focus {
+          background-color: $bg-black;
+          // border: 1px so
+        }
+      }
+    }
+
+    .form-actions {
+        //
+      &__btn {
+        //
+      }
+    }
   }
 }
