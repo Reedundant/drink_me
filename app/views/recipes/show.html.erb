@@ -1,9 +1,16 @@
 <div class="r-container">
 
   <section class="recipe">
-    <div class="recipe__card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= @single_recipe_data["strDrinkThumb"] %>)">
-      <h2><%= @single_recipe_data["strDrink"] %></h2>
+
+    <h1><%= @single_recipe_data["strDrink"] %></h1>
+
+    <div class="recipe__imgContainer">
+      <%= image_tag @single_recipe_data["strDrinkThumb"] %>
     </div>
+
+    <%# <div class="recipe__card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%# @single_recipe_data["strDrinkThumb"] %>)">
+      <h1><%#@single_recipe_data["strDrink"] %></h1>
+    </div> %>
 
     <section class="recipe__ingredients">
       <h2>Ingredients</h2>
@@ -26,7 +33,7 @@
       <p><%= @single_recipe_data["strInstructions"] %></p>
     </section>
 
-    <%= link_to "Back to recipes", recipes_path %>
+    <%= link_to "Back to recipes", recipes_path, class: "recipe__btn" %>
   </section>
 </div>
 
