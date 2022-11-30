@@ -1,0 +1,5 @@
+meta_product_name: "Drink.Me"
+meta_title: "Drink.Me - Accessible Mixology"
+meta_description: "Want a stiff drink, but don't know how to make one? drink.me is here to help!"
+meta_image: "cover.png" # should exist in `app/assets/images/`
+# twitter_account: "@product_twitter_account"   # required for Twitter Cards
