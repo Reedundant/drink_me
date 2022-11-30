@@ -82,5 +82,9 @@ $card-gray: #1B1B1B;
     border-radius: 50px;
     width: 10rem;
     margin: 0 auto;
+
+    &:active {
+      color: goldenrod;
+    }
   }
 }
