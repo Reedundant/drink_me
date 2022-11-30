@@ -71,6 +71,7 @@ class RecipesController < ApplicationController
 
     @ingredients = @random_recipe_data.select { |k, v| k =~ /strIngredient\d+/ }.compact
     @measurements = @random_recipe_data.select { |k, v| k =~ /strMeasure\d+/ }.compact
+  end
 
   def fetch_all_cocktails
     @api_key = ENV["COCKTAILDB_API_KEY"]
@@ -85,6 +86,4 @@ class RecipesController < ApplicationController
     @cocktails_url_serialized = URI.open(@cocktails_url).read
     @filter_data = JSON.parse(@cocktails_url_serialized)["drinks"]
   end
-end
-
 end
