@@ -12,8 +12,11 @@ Rails.application.routes.draw do
 
   get 'pages/results', to: "pages#results", as: :results
 
-  get 'recipes/codex', to: "recipes#codex", as: :codex
 
+  get 'recipes/random', to: "recipes#random", as: :random
+
+  get 'recipes/codex', to: "recipes#codex", as: :codex
+  
   get 'recipes/popular', to: "recipes#popular", as: :popular
 
   # Suggestions go here because
