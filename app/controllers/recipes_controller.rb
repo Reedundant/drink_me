@@ -17,7 +17,6 @@ class RecipesController < ApplicationController
     fetch_single_recipe(@id)
   end
 
-
   def random
     fetch_random_recipe
   end
@@ -29,7 +28,6 @@ class RecipesController < ApplicationController
   def popular
     fetch_popular_cocktails
   end
-
 
   private
 
@@ -65,7 +63,6 @@ class RecipesController < ApplicationController
     @measurements = @single_recipe_data.select { |k, v| k =~ /strMeasure\d+/ }.compact
   end
 
-
   def fetch_random_recipe
     @api_key = ENV["COCKTAILDB_API_KEY"]
     @random_recipe_url = "https://www.thecocktaildb.com/api/json/v2/#{@api_key}/random.php"
@@ -90,10 +87,4 @@ class RecipesController < ApplicationController
   end
 end
 
-
-
-
-  # @filter_data[0]["strDrink"]
-    # @filter_data.each do |recipe|
-    #   Recipe.create(name: recipe["strDrink"])
-    # end
+end
