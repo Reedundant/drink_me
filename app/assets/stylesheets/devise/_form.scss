@@ -13,6 +13,11 @@
     margin-bottom: 1rem;
   }
 
+  a {
+    color: goldenrod;
+    text-decoration: none;
+  }
+
   // FORM
   .simple_form {
     // border: 1px solid blue;
@@ -35,8 +40,13 @@
     .form-actions {
         //
       &__btn {
-        //
+        // border: 1px solid red;
       }
+    }
+
+    .form-check-input {
+      background-color: $bg-black;
+      border: 1px solid rgba(211, 211, 211, 0.26);
     }
   }
 }
