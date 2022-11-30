@@ -2,18 +2,25 @@ $card-gray: #1B1B1B;
 
 .r-container {
   background-color: $bg-black;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 5rem;
 }
 
 .recipe {
   // border: 1px solid red;
-  width: 100%;
-  min-height: 100vh;
+  width: 90%;
   height: auto;
   display: flex;
   flex-direction: column;
+
   padding: 2rem 1rem;
   background-color: $card-gray;
   color: $white;
+  border-radius: 8px;
 
   h1, h2 {
     font-weight: 300;
