@@ -1,1 +1,64 @@
 @import "show";
+
+.recipes {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  height: auto;
+  padding: 5rem 1.5rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+
+  text-align: center;
+  background-color: $bg-black;
+  color: $white;
+
+  h1 {
+    font-weight: 300;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    width: 100%;
+    margin-bottom: 3rem;
+
+    .recipe-link {
+      text-decoration: none;
+    }
+
+    li {
+      //
+      .card-category {
+        background-size: cover;
+        background-position: center;
+        height: 107px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+
+        h2 {
+          font-size: 1.625rem; // 26px
+          font-weight: 400;
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+  &__btn {
+    text-decoration: none;
+    color: goldenrod;
+    border: 1px solid goldenrod;
+    padding: 0.8rem 1.5rem;
+    border-radius: 50px;
+    position: absolute;
+    bottom: 2rem;
+  }
+}
+
