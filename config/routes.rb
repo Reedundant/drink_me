@@ -16,7 +16,8 @@ Rails.application.routes.draw do
   get 'recipes/random', to: "recipes#random", as: :random
 
   get 'recipes/codex', to: "recipes#codex", as: :codex
-
+  
+  get 'recipes/popular', to: "recipes#popular", as: :popular
 
   # Suggestions go here because
   resources :recipes, only: %i[index show]

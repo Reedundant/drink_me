@@ -1,19 +1,19 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-  <div class="container-fluid">
+  <div class="container-fluid expand-sm">
     <%# <a class="navbar-brand" href="#">
       <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png" />
 </a> %>
-    <div id="wrap">
-      <form action="" autocomplete="on">
+    <%# <div id="wrap"> %>
+      <%# <form action="" autocomplete="on">
         <input id="search" name="search" type="text" placeholder="What're we looking for ?"><input id="search_submit" value="Rechercher" type="submit">
-      </form>
-    </div>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      </form> %>
+    <%# </div> %>
+    <%# <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
-    </button>
-        <h1 class="navbar-title">DRINK ME</h1>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto">
+    </button> %>
+        <h1 class="navbar-title">Drink Me</h1>
+    <div class="" id="navbarSupportedContent">
+      <ul class=" me-auto">
           <%# <li class="nav-item active">
             <a class="nav-link" href="#">Home</a>
           </li>
@@ -22,10 +22,10 @@
           </li> %>
           <li class="nav-item dropdown">
             <%= image_tag("svg-hamburger.svg", class: "nav-hamburger", id: "navbarDropdown", data: {"bs-toggle": "dropdown"} ) %>
-            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">Ingredient</a>
-              <a class="dropdown-item" href="#">Cocktails</a>
-              <a class="dropdown-item" href="#">About Us</a>
+            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown" style="background-color: #131515; border-color: #2B2C28;"">
+              <a class="dropdown-item" href= user_ingredients>Ingredients</a>
+              <a class="dropdown-item" href="recipes/codex">Codex</a>
+              <a class="dropdown-item" href="recipes/random">Try Your Luck!!</a>
             </div>
           </li>
           <!--li class="nav-item"-->
