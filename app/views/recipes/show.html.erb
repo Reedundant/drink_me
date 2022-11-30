@@ -8,6 +8,7 @@
       <%= image_tag @single_recipe_data["strDrinkThumb"] %>
     </div>
 
+
     <section class="recipe__ingredients">
       <h2>Ingredients</h2>
       <div class="ingredients-container">
@@ -24,10 +25,14 @@
       </div>
     </section>
 
-    <section class="recipe__instructions">
-      <h2>Instructions</h2>
-      <p><%= @single_recipe_data["strInstructions"] %></p>
-    </section>
+  <section class="recipe__instructions">
+    <h2>Instructions</h2>
+    <%@single_recipe_data["strInstructions"].split(".").each do |instruction| %>
+      <p> <%= instruction %>.</p>
+    <% end %>
+  </section>
+
+  
 
     <%= link_to "Back to recipes", recipes_path, class: "recipe__btn" %>
   </section>
