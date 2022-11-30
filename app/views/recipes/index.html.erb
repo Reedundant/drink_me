@@ -1,9 +1,18 @@
-<h1>Suggested recipes</h1>
+<h1>Pick Your Poison!</h1>
 
 <ul class="list-unstyled">
   <% @filter_data.each do |recipe| %>
-    <li><%= link_to recipe["strDrink"], recipe_path(recipe["idDrink"]) %></li>
+    <li>
+      <%= link_to recipe_path(recipe["idDrink"]) do %>
+        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
+        url(<%= recipe["strDrinkThumb"] %>)">
+          <%= recipe["strDrink"] %>
+        </div>
+      <% end %>
+    </li>
   <% end %>
 </ul>
 
 <%= link_to "Back to Ingredients", user_ingredients_path %>
+
+    <%# <li>link_to recipe["strDrink"], recipe_path(recipe["idDrink"])</li> %>
