@@ -59,6 +59,9 @@
     border-radius: 50px;
     position: absolute;
     bottom: 2rem;
+
+    &:active {
+      color: goldenrod;
+    }
   }
 }
-

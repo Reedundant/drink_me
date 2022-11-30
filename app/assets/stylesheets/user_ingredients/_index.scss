@@ -63,6 +63,10 @@ $white: #FFFAFB;
       border-radius: 50px;
       width: 10rem;
       margin: 0 auto;
+
+      &:active {
+        color: goldenrod;
+      }
     }
   }
 }
