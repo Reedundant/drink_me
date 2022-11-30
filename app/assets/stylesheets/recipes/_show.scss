@@ -1,15 +1,40 @@
-.recipe {
-  border: 1px solid red;
+$card-gray: #1B1B1B;
+
+.r-container {
+  background-color: $bg-black;
+  min-height: 100vh;
   width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 5.5rem;
+  padding-bottom: 2rem;
+}
+
+.recipe {
+  // border: 1px solid red;
+  width: 90%;
   height: auto;
   display: flex;
   flex-direction: column;
-  padding: 2rem 1rem;
-  background-color: $bg-black;
-  color: $white;
+  padding: 1.5rem 1rem;
 
-  h1, h2 {
+  background-color: #1B1B1B;
+  color: #FFFAFB;
+  border-radius: 8px;
+  gap: 2rem;
+  text-align: center;
+
+  h1 {
+    font-size: 2.8rem; // 26px
     font-weight: 300;
+    margin-bottom: 0;
+  }
+
+  h2 {
+    font-weight: 300;
+    margin-bottom: 1rem;
+    font-size: 2.3rem;
   }
 
   &__imgContainer {
@@ -17,29 +42,41 @@
     height: auto;
 
     img {
+      border-radius: 8px;
       width: 100%;
       object-fit: contain;
     }
   }
 
   &__ingredients {
-    // border: 1px solid blue;
+    border-bottom: 0.1px solid rgba(211, 211, 211, 0.257);
+    padding-bottom: 1.2rem;
+    font-size: 1.2rem;
 
     .ingredients-container {
       display: flex;
       gap: 2rem;
+      justify-content: center;
 
       .ingredient-list {
         // border: 2px dashed magenta;
+        text-align: left;
       }
 
       .measurement-list {
         // border: 2px dashed magenta;
+        text-align: right;
       }
     }
   }
 
   &__instructions {
-    //
+    font-size: 1.2rem;
+  }
+
+  &__btn {
+    text-decoration: none;
+    color: goldenrod;
+    padding: 0.8rem 1.5rem;
   }
 }
