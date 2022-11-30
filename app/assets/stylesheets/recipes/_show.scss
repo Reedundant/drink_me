@@ -1,6 +1,7 @@
 .recipe {
   // border: 1px solid red;
   width: 100%;
+  min-height: 100vh;
   height: auto;
   display: flex;
   flex-direction: column;
@@ -11,16 +12,6 @@
   h1, h2 {
     font-weight: 300;
   }
-
-  // &__imgContainer {
-  //   width: 100%;
-  //   height: auto;
-
-  //   img {
-  //     width: 100%;
-  //     object-fit: contain;
-  //   }
-  // }
 
   .card-category {
     background-size: cover;
