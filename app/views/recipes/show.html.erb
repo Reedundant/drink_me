@@ -23,7 +23,9 @@
 
   <section class="recipe__instructions">
     <h2>Instructions</h2>
-    <p><%= @single_recipe_data["strInstructions"] %></p>
+    <%@single_recipe_data["strInstructions"].split(".").each do |instruction| %>
+      <p> <%= instruction %>.</p>
+    <% end %>
   </section>
 
   <%= link_to "Back to recipes", recipes_path %>
