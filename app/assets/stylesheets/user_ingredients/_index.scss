@@ -8,6 +8,9 @@ $white: #FFFAFB;
   height: auto;
   padding: 6rem 1rem 2rem 1rem;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 
   h1 {
     font-weight: 300;
@@ -53,8 +56,13 @@ $white: #FFFAFB;
     }
 
     &__btn {
-      text-align: center;
-      font-size: 2rem;
+      text-decoration: none;
+      color: goldenrod;
+      border: 1px solid goldenrod;
+      padding: 0.6rem 2rem;
+      border-radius: 50px;
+      width: 10rem;
+      margin: 0 auto;
     }
   }
 }

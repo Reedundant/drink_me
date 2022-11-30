@@ -77,6 +77,10 @@ $card-gray: #1B1B1B;
   &__btn {
     text-decoration: none;
     color: goldenrod;
-    padding: 0.8rem 1.5rem;
+    border: 1px solid goldenrod;
+    padding: 0.6rem 0;
+    border-radius: 50px;
+    width: 10rem;
+    margin: 0 auto;
   }
 }

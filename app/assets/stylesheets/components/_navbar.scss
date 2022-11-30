@@ -1,7 +1,8 @@
 // This makes navbar fixed to the top and remains
 // above all content. - Melissa
 .navbar {
-  display: block;
+  display: flex;
+  align-items: center;
   position: fixed;
   width: 100%;
   top: 0;
@@ -9,6 +10,20 @@
   z-index: 2;
   min-height: 70px;
   height: auto;
+}
+
+.navbar .container-fluid {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  h1 {
+    margin-bottom: 0;
+  }
+
+  .me-auto {
+    margin-bottom: 0.25rem;
+  }
 }
 
 .navbar-lewagon {
