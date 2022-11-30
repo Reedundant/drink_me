@@ -1,0 +1,18 @@
+<div class="recipes">
+  <h1>C O D E X</h1>
+
+  <ul class="list-unstyled recipes__list">
+    <% @filter_data.each do |recipe| %>
+      <li>
+        <%= link_to recipe_path(recipe["idDrink"]), class: "recipe-link" do %>
+          <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
+          url(<%= recipe["strDrinkThumb"] %>)">
+            <h2><%= recipe["strDrink"] %></h2>
+          </div>
+        <% end %>
+      </li>
+    <% end %>
+  </ul>
+
+  <%= link_to "Back to Ingredients", user_ingredients_path, class: "recipes__btn" %>
+</div>
