@@ -1,5 +1,5 @@
 .recipe {
-  border: 1px solid red;
+  // border: 1px solid red;
   width: 100%;
   height: auto;
   display: flex;
@@ -12,13 +12,29 @@
     font-weight: 300;
   }
 
-  &__imgContainer {
-    width: 100%;
-    height: auto;
+  // &__imgContainer {
+  //   width: 100%;
+  //   height: auto;
 
-    img {
-      width: 100%;
-      object-fit: contain;
+  //   img {
+  //     width: 100%;
+  //     object-fit: contain;
+  //   }
+  // }
+
+  .card-category {
+    background-size: cover;
+    background-position: center;
+    height: 107px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+
+    h2 {
+      font-size: 2rem; // 26px
+      font-weight: 400;
+      margin-bottom: 0;
     }
   }
 
