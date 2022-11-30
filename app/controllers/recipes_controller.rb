@@ -7,6 +7,7 @@ class RecipesController < ApplicationController
     @user_ingredients = UserIngredient.where(selected: true)
     @ingredients_array = @user_ingredients.map { |x| x.ingredient.name.gsub(' ', '+') }
     @selected_ingredients = @ingredients_array.join(",")
+    # raise
 
     fetch_recipes(@selected_ingredients)
   end
@@ -24,7 +25,20 @@ class RecipesController < ApplicationController
     # @filter_url = "https://www.thecocktaildb.com/api/json/v2/#{@api_key}/filter.php?i=Gin,Rum"
 
     @filter_url_serialized = URI.open(@filter_url).read
-    @filter_data = JSON.parse(@filter_url_serialized)["drinks"]
+    if JSON.parse(@filter_url_serialized)["drinks"] != "None Found"
+      @filter_data = JSON.parse(@filter_url_serialized)["drinks"]
+    else
+      @ingredients_array = ingredients.split(',')
+      @compiled_results = []
+      @ingredients_array.each do |i|
+        @filter_url = "https://www.thecocktaildb.com/api/json/v2/#{@api_key}/filter.php?i=#{i}"
+        @filter_url_serialized = URI.open(@filter_url).read
+        @data = JSON.parse(@filter_url_serialized)["drinks"]
+        @compiled_results << @data
+      end
+      @filter_data = @compiled_results.flatten
+      # raise
+    end
   end
 
   def fetch_single_recipe(id)
