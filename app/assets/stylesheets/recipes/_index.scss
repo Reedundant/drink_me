@@ -1,16 +1,55 @@
 @import "show";
 
-.card-category {
-  background-size: cover;
-  background-position: center;
-  height: 180px;
+.recipes {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 5rem 1rem;
+  text-align: center;
+  background-color: $bg-black;
+  color: $white;
   align-items: center;
-  color: white;
-  font-size: 24px;
-  font-weight: bold;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  border-radius: 5px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+
+
+  h1 {
+    font-weight: 300;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    width: 100%;
+
+    .recipe-link {
+      text-decoration: none;
+    }
+
+    li {
+      //
+      .card-category {
+        background-size: cover;
+        background-position: center;
+        height: 107px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+
+        h2 {
+          font-size: 1.625rem; // 26px
+          font-weight: 600;
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+  &__btn {
+    text-decoration: none;
+    color: goldenrod;
+    border: 1px solid goldenrod;
+    padding: 0.8rem 1.5rem;
+    border-radius: 50px;
+  }
 }
