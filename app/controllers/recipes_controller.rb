@@ -17,9 +17,15 @@ class RecipesController < ApplicationController
     fetch_single_recipe(@id)
   end
 
+
   def random
     fetch_random_recipe
   end
+
+  def codex
+    fetch_all_cocktails
+  end
+
 
   private
 
@@ -55,6 +61,7 @@ class RecipesController < ApplicationController
     @measurements = @single_recipe_data.select { |k, v| k =~ /strMeasure\d+/ }.compact
   end
 
+
   def fetch_random_recipe
     @api_key = ENV["COCKTAILDB_API_KEY"]
     @random_recipe_url = "https://www.thecocktaildb.com/api/json/v2/#{@api_key}/random.php"
@@ -63,8 +70,17 @@ class RecipesController < ApplicationController
 
     @ingredients = @random_recipe_data.select { |k, v| k =~ /strIngredient\d+/ }.compact
     @measurements = @random_recipe_data.select { |k, v| k =~ /strMeasure\d+/ }.compact
+
+  def fetch_all_cocktails
+    @api_key = ENV["COCKTAILDB_API_KEY"]
+    @cocktails_url = "https://www.thecocktaildb.com/api/json/v2/#{@api_key}/filter.php?c=Cocktail"
+    @cocktails_url_serialized = URI.open(@cocktails_url).read
+    @filter_data = JSON.parse(@cocktails_url_serialized)["drinks"]
   end
 end
+
+
+
 
   # @filter_data[0]["strDrink"]
     # @filter_data.each do |recipe|
