@@ -1,3 +1,9 @@
+$card-gray: #1B1B1B;
+
+.r-container {
+  background-color: $bg-black;
+}
+
 .recipe {
   // border: 1px solid red;
   width: 100%;
@@ -6,14 +12,14 @@
   display: flex;
   flex-direction: column;
   padding: 2rem 1rem;
-  background-color: $bg-black;
+  background-color: $card-gray;
   color: $white;
 
   h1, h2 {
     font-weight: 300;
   }
 
-  .card-category {
+  &__card-category {
     background-size: cover;
     background-position: center;
     height: 107px;

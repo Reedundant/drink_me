@@ -1,31 +1,33 @@
-<div class="recipe">
+<div class="r-container">
 
-  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= @single_recipe_data["strDrinkThumb"] %>)">
-    <h2><%= @single_recipe_data["strDrink"] %></h2>
-  </div>
-
-  <section class="recipe__ingredients">
-    <h2>Ingredients</h2>
-    <div class="ingredients-container">
-      <ul class="measurement-list list-unstyled">
-        <% @measurements.each do |_k, measurement| %>
-          <li><%= measurement %></li>
-        <% end %>
-      </ul>
-      <ul class="ingredient-list list-unstyled">
-        <% @ingredients.each do |_k, ingredient| %>
-          <li><%= ingredient %></li>
-        <% end %>
-      </ul>
+  <section class="recipe">
+    <div class="recipe__card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= @single_recipe_data["strDrinkThumb"] %>)">
+      <h2><%= @single_recipe_data["strDrink"] %></h2>
     </div>
-  </section>
 
-  <section class="recipe__instructions">
-    <h2>Instructions</h2>
-    <p><%= @single_recipe_data["strInstructions"] %></p>
-  </section>
+    <section class="recipe__ingredients">
+      <h2>Ingredients</h2>
+      <div class="ingredients-container">
+        <ul class="measurement-list list-unstyled">
+          <% @measurements.each do |_k, measurement| %>
+            <li><%= measurement %></li>
+          <% end %>
+        </ul>
+        <ul class="ingredient-list list-unstyled">
+          <% @ingredients.each do |_k, ingredient| %>
+            <li><%= ingredient %></li>
+          <% end %>
+        </ul>
+      </div>
+    </section>
 
-  <%= link_to "Back to recipes", recipes_path %>
+    <section class="recipe__instructions">
+      <h2>Instructions</h2>
+      <p><%= @single_recipe_data["strInstructions"] %></p>
+    </section>
+
+    <%= link_to "Back to recipes", recipes_path %>
+  </section>
 </div>
 
 <%# underscore signifies we're not using the key. just the value, this is a convention. =~ REGEX%>
