@@ -12,3 +12,6 @@ application.register("prevent-reload-on-select", PreventReloadOnSelectController
 
 import FadeOutController from "./fade_out_controller"
 application.register("fade-out", FadeOutController)
+
+import LoaderController from "./loader_controller"
+application.register("loader", LoaderController)
