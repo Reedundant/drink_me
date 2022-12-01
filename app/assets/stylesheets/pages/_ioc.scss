@@ -9,14 +9,14 @@
   padding-top: calc(70px + 1rem);
 
   &__prompt {
-    // width: 90%;
-    // height: 30px;
-    // display: flex;
-    // justify-content: center;
-    // align-items: center;
-    // border: 1px solid gray;
-    // border-bottom: 0px;
-    margin-bottom: 0.8rem;
+    width: 90%;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid gray;
+    border-bottom: 0px;
+    // margin-bottom: 0.8rem;
 
     p {
       font-size: 0.8rem;
@@ -40,7 +40,7 @@
       width: 50%;
       height: 100%;
       text-decoration: none;
-      color: goldenrod;
+      color: gainsboro;
 
 
       .ingredients-link, .codex-link {
@@ -60,6 +60,7 @@
           font-size: 1.5rem;
           font-weight: 200;
           line-height: 1.25;
+          opacity: 0.9;
         }
       }
 
