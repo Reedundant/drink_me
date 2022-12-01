@@ -3,8 +3,7 @@ require 'open-uri'
 
 class RecipesController < ApplicationController
   def index
-    @user = current_user
-    @user_ingredients = UserIngredient.where(selected: true)
+    @user_ingredients = UserIngredient.where(user: current_user, selected: true)
     @ingredients_array = @user_ingredients.map { |x| x.ingredient.name.gsub(' ', '+') }
     @selected_ingredients = @ingredients_array.join(",")
     # raise
