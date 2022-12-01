@@ -7,7 +7,7 @@ class PagesController < ApplicationController
   def verify
   end
 
-  def suggestion
+  def ioc
   end
 
   def results
