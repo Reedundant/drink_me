@@ -1,6 +1,7 @@
 <div class="recipes">
   <h1>C O C K T A I L S</h1>
 
+    <h3 class="cocktail-display"> Displaying <%= @filter_data.count %></h3>
   <ul class="list-unstyled recipes__list">
     <% @filter_data.each do |recipe| %>
       <li>
