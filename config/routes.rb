@@ -8,7 +8,7 @@ Rails.application.routes.draw do
 
   get '/user_ingredients/:id/toggle_selected', to: 'user_ingredients#toggle_selected', as: :toggle_selected
 
-  get 'pages/suggestion', to: "pages#suggestion", as: :suggestion
+  get 'pages/ioc', to: "pages#ioc", as: :ioc
 
   get 'pages/results', to: "pages#results", as: :results
 
