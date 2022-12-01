@@ -1,7 +1,9 @@
-<div id="loader" class="loader">
-  <p class="loader__text">Mixologizing...</p>
+<div data-controller="loader">
+  <div id="loader" class="loader" data-loader-target="loaderDiv">
+    <p class="loader__text">Mixologizing...</p>
 
-  <div class="loader__gifContainer">
-    <%= image_tag "loader.gif" %>
+    <div class="loader__gifContainer">
+      <%= image_tag "loader.gif" %>
+    </div>
   </div>
 </div>
