@@ -1,5 +1,6 @@
 // CONTAINER
 .form {
+  // border: 1px solid red;
   height: 100vh;
   background-color: $bg-black;
   padding: 90px 1rem 1rem 1rem;
@@ -39,6 +40,10 @@
         //
       &__btn {
         // border: 1px solid red;
+        border-radius: 50px;
+        font-size: 20px;
+        font-weight: lighter;
+        border: 1px solid white;
         position: absolute;
         bottom: 1rem;
       }
