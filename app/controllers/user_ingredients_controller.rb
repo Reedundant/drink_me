@@ -10,6 +10,8 @@ class UserIngredientsController < ApplicationController
   end
 
   def toggle_selected
+    # ingredient.toggle :selected
+
     @user_ingredient = UserIngredient.find(params[:id])
 
     if @user_ingredient.selected
@@ -17,7 +19,6 @@ class UserIngredientsController < ApplicationController
     else
       @user_ingredient.update(selected: true)
     end
-
     head :ok
   end
 
