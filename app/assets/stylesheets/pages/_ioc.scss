@@ -1,51 +1,78 @@
-// .banner {
-//     background-size: cover;
-//     background-position: center;
-//     padding: 150px 0;
-//   }
+.ioc {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: $bg-black;
+  padding-top: calc(70px + 1rem);
 
-  .banner h1 {
-    margin: 100px;
-    margin-bottom: 100px;
-    color: white;
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-    font-size: 32px;
-    font-weight: bold;
+  &__prompt {
+    // width: 90%;
+    // height: 30px;
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    // border: 1px solid gray;
+    // border-bottom: 0px;
+    margin-bottom: 0.8rem;
+
+    p {
+      font-size: 0.8rem;
+      font-style: italic;
+      font-weight: 300;
+      color: $white;
+      opacity: 0.8;
+      margin-bottom: 0;
+    }
   }
 
-  .banner p {
-    font-size: 20px;
-    background-color: white;
-    opacity: .7;
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  }
-
-  .container2 {
+  &__btns {
+    width: 90%;
+    height: 87%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    height: 180px;
-    flex-wrap: nowrap;
-    flex-direction: column;
-    margin: 15px 0px;
-  }
+    border: 1px solid gray;
 
-  .h2 {
-    color: white;
-  }
+    a {
+      width: 50%;
+      height: 100%;
+      text-decoration: none;
+      color: goldenrod;
 
-  .banner {
-    align-self: stretch;
-    color: white;
 
-  }
+      .ingredients-link, .codex-link {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid gray;
+        padding: 0 1rem;
+        text-align: center;
 
-  .btn {
-    font-size: 30px;
-    --bs-btn-color: white;
-  }
+        &:active {
+          background: linear-gradient(to bottom, rgba(218, 165, 32, 0.341), transparent);
+        }
 
-  .suggestions-container {
-    color: white;
-    // background-color: #131515;
+        p {
+          font-size: 1.5rem;
+          font-weight: 200;
+          line-height: 1.25;
+        }
+      }
+
+      .ingredients-link {
+        border-top-left-radius: 155px;
+        border-right: 0px;
+        border-bottom: 0px;
+      }
+
+      .codex-link {
+        border-top-right-radius: 155px;
+        border-bottom: 0px;
+      }
+    }
   }
+}
