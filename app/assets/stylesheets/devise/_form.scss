@@ -37,6 +37,7 @@
     }
 
     .form-actions {
+      text-align: center;
         //
       &__btn {
         // border: 1px solid red;
@@ -47,6 +48,14 @@
         border: 1px solid white;
         position: absolute;
         bottom: 1rem;
+
+        &.sign-up,
+        &.log-in {
+          position: relative;
+          width: 50%;
+          margin-top: 10px;
+
+        }
       }
     }
 
