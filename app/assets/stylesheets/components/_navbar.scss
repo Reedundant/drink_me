@@ -51,6 +51,16 @@ body {
   color: #ECECEA;
   letter-spacing: 10px;
   font-weight: lighter;
+
+  a {
+    text-decoration: none;
+    color: #ECECEA;
+
+
+    &:active {
+      color: goldenrod;
+    }
+  }
 }
 
 .nav-hamburger {
