@@ -51,6 +51,12 @@ $white: #FFFAFB;
 
         .selected {
           border-color: goldenrod;
+          border-width: 1.5px;
+          color: goldenrod;
+
+          p {
+            font-weight: 500;
+          }
         }
       }
     }
