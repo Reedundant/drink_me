@@ -2,12 +2,13 @@
   <div class="container-fluid expand-sm">
     <h1 class="navbar-title">DRINK ME</h1>
     <div class="" id="navbarSupportedContent">
-        <ul class="me-auto">
+        <ul class="me-auto list-unstyled">
           <li class="nav-item dropdown">
             <%= image_tag("svg-hamburger.svg", class: "nav-hamburger", id: "navbarDropdown", data: {"bs-toggle": "dropdown"} ) %>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown" style="background-color: #131515; border-color: #2B2C28;">
-              <%= link_to "Ingredients", user_ingredients_path, class: 'dropdown-item' %>
-              <%= link_to "Codex", codex_path, class: 'dropdown-item' %>
+              <%= link_to "Select Ingredients", user_ingredients_path, class: 'dropdown-item' %>
+              <%= link_to "Cocktail Codex", codex_path, class: 'dropdown-item' %>
+              <%= link_to "Hottest Drinks", popular_path, class: 'dropdown-item' %>
               <%= link_to "Try Your Luck!", random_path, class: 'dropdown-item' %>
               <% if user_signed_in? %>
                 <%= link_to "Log Out", destroy_user_session_path, class: 'dropdown-item', data: {turbo_method: :delete} %>

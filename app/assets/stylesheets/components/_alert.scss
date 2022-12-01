@@ -1,8 +1,17 @@
 .alert {
+  width: 90%;
   position: fixed;
-  bottom: 16px;
-  right: 16px;
+  bottom: 13px;
+  left: 49%;
+  transform: translateX(-50%);
   z-index: 1000;
+
+  border: 1px solid #000;
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  background-color: rgba(120, 120, 119, 0.25);
+  border-radius: 5px;
+  color: goldenrod;
 }
 
 @keyframes fadeout {

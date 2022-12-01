@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
-  # skip_before_action :authenticate_user!, only: [ :home ]
+  before_action :authenticate_user!, only: :ioc
 
   def home
   end
@@ -7,9 +7,6 @@ class PagesController < ApplicationController
   def verify
   end
 
-  def suggestion
-  end
-
-  def results
+  def ioc
   end
 end
