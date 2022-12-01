@@ -4,6 +4,8 @@ class UserIngredientsController < ApplicationController
 
   def index
     @user = current_user
+    # @ingredients = Ingredient.where(user: current_user)
+    ## Add .order to help organize ingredients
     @user_ingredients = UserIngredient.where(user: current_user).includes(:ingredient).order('ingredients.name asc')
   end
 
