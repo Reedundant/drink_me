@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
-  # skip_before_action :authenticate_user!, only: [ :home ]
+  before_action :authenticate_user!, only: :ioc
 
   def home
   end
@@ -8,8 +8,5 @@ class PagesController < ApplicationController
   end
 
   def ioc
-  end
-
-  def results
   end
 end
