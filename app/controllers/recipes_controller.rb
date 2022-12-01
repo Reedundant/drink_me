@@ -74,7 +74,7 @@ class RecipesController < ApplicationController
 
   def fetch_all_cocktails
     @api_key = ENV["COCKTAILDB_API_KEY"]
-    @cocktails_url = "https://www.thecocktaildb.com/api/json/v2/#{@api_key}/filter.php?c=Cocktail"
+    @cocktails_url = "https://www.thecocktaildb.com/api/json/v2/#{@api_key}/filter.php?a=Alcoholic"
     @cocktails_url_serialized = URI.open(@cocktails_url).read
     @filter_data = JSON.parse(@cocktails_url_serialized)["drinks"]
   end
