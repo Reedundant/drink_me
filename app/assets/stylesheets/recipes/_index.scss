@@ -23,7 +23,7 @@
   &__list {
     display: flex;
     flex-direction: column;
-    gap: 2.5rem;
+    gap: 1.8rem;
     width: 100%;
     margin-bottom: 3rem;
 
@@ -41,6 +41,7 @@
         justify-content: center;
         align-items: center;
         color: white;
+        border-radius: 5px;
 
         h2 {
           font-size: 1.625rem; // 26px
