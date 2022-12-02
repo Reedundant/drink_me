@@ -13,13 +13,15 @@
       <h2>Ingredients</h2>
       <div class="ingredients-container">
         <ul class="measurement-list list-unstyled">
-          <% @measurements.each do |_k, measurement| %>
-            <li><%= measurement %></li>
-          <% end %>
-        </ul>
-        <ul class="ingredient-list list-unstyled">
-          <% @ingredients.each do |_k, ingredient| %>
-            <li><%= ingredient %></li>
+          <% @measurements.each_with_index do |measurement, index| %>
+            <li class="d-flex justify-content-between gap-3">
+              <div>
+                <%= measurement[1] %>
+              </div>
+              <div class="text-left">
+                <%= @ingredients[index][1] unless measurement[1] == "" %>
+              </div>
+             </li>
           <% end %>
         </ul>
       </div>

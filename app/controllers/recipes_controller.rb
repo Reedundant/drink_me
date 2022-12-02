@@ -58,8 +58,9 @@ class RecipesController < ApplicationController
     @single_recipe_url_serialized = URI.open(@single_recipe_url).read
     @single_recipe_data = JSON.parse(@single_recipe_url_serialized)["drinks"][0]
 
-    @ingredients = @single_recipe_data.select { |k, v| k =~ /strIngredient\d+/ }.compact
-    @measurements = @single_recipe_data.select { |k, v| k =~ /strMeasure\d+/ }.compact
+    @ingredients = @single_recipe_data.select { |k, v| k =~ /strIngredient\d+/ }.compact.to_a
+    @measurements = @single_recipe_data.select { |k, v| k =~ /strMeasure\d+/ }.compact.to_a
+    # raise
   end
 
   def fetch_random_recipe
